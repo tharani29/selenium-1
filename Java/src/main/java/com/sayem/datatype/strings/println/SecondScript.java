@@ -24,4 +24,4 @@ public class SecondScript {
         System.out.println("Welcome\nto\nJava\nProgramming");
 
     } // end method main
-} // end class SecondScript
+} // end class Demo1

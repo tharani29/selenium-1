@@ -24,7 +24,7 @@
     </licenses>
 
     <properties>
-        <org.selenium-version>2.28.0</org.selenium-version>
+        <org.selenium-version>2.29.0</org.selenium-version>
         <jdk.version>1.7</jdk.version>
         <org.springframework-version>3.1.0.RELEASE</org.springframework-version>
         <resources.encoding>UTF-8</resources.encoding>
