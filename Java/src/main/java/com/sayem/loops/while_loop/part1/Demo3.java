@@ -1,7 +1,7 @@
 package com.sayem.loops.while_loop.part1;
 
 
-public class ThirdScript {
+public class Demo3 {
 
     public static void main(String [] args){
 

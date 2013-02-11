@@ -1,6 +1,6 @@
 package com.sayem.loops.while_loop.part1;
 
-public class FourthScript {
+public class Demo4 {
 
     public static void main(String [] args){
 

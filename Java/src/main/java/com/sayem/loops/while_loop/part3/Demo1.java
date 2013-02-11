@@ -7,5 +7,5 @@ package com.sayem.loops.while_loop.part3;
  * Time: 8:51 PM
  * To change this template use File | Settings | File Templates.
  */
-public class FirstScript {
+public class Demo1 {
 }

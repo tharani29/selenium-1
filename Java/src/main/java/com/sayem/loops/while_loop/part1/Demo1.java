@@ -1,6 +1,6 @@
 package com.sayem.loops.while_loop.part1;
 
-public class FirstScript {
+public class Demo1 {
 
     public static void main(String [] args){
 
