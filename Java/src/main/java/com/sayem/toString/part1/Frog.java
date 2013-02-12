@@ -1,4 +1,4 @@
-package com.sayem.toString.part1;
+package com.sayem.tostring.part1;
 
 public class Frog {
 

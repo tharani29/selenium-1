@@ -1,6 +1,6 @@
-package com.sayem.toString.part2;
+package com.sayem.tostring.part2;
 
-import com.sayem.toString.part1.Frog;
+import com.sayem.tostring.part1.Frog;
 
 public class App {
 
