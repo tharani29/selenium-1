@@ -1,4 +1,4 @@
-package com.sayem.primitives.integers;
+package com.sayem.primitives.byte_type;
 
 /**
  * Hello world!

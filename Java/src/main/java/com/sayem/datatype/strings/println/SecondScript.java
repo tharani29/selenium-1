@@ -10,7 +10,7 @@ package com.sayem.datatype.strings.println;
 
         \\      Backslash. Used to print a backslash character.
 
-        \"      Double quote. Used to print a double-quote character. For example,
+        \"      Double quote. Used to print a double_type-quote character. For example,
                 System.out.println( "\"in quotes\"" );
                 displays "in quotes".
 */

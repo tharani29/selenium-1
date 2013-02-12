@@ -1,4 +1,4 @@
-package com.sayem.primitives.equal;
+package com.sayem.primitives.long_type;
 
 /**
  * Hello world!
