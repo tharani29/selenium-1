@@ -4,9 +4,8 @@ public class HelloWorld {
 
     public static void main(String [] args){
 
-        int number = 3;
-        --number;
+        boolean value = true;
 
-        System.out.println(number);
+        System.out.println(value);
     }
 }
