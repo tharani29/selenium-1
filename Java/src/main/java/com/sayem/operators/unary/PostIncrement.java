@@ -7,6 +7,8 @@ public class PostIncrement {
         int number = 3;
         number++;  // decrements a value by 1
 
+        number += 2;
+
         System.out.println(number);
     }
 }
