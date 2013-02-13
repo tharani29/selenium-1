@@ -8,6 +8,7 @@
     <modules>
         <module>Java</module>
         <module>WebDriver</module>
+        <module>Games</module>
     </modules>
     <packaging>pom</packaging>
 
