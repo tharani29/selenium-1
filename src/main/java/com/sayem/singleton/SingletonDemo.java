@@ -1,4 +1,4 @@
-package com.sayem;
+package com.sayem.singleton;
 
 public class SingletonDemo {
 

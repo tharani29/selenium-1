@@ -1,5 +1,7 @@
 package com.sayem;
 
+import org.testng.Assert;
+
 /**
  * Hello world!
  *
