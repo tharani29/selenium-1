@@ -22,12 +22,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="DesignPatterns" />
         <module name="Games" />
         <module name="Java" />
         <module name="WebDriver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DesignPatterns" target="1.7" />
       <module name="Games" target="1.7" />
       <module name="Java" target="1.7" />
       <module name="Selenium" target="1.7" />
