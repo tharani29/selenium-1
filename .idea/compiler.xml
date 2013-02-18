@@ -22,6 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="Cucumber" />
         <module name="DesignPatterns" />
         <module name="Games" />
         <module name="Java" />
@@ -29,6 +30,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Cucumber" target="1.7" />
       <module name="DesignPatterns" target="1.7" />
       <module name="Games" target="1.7" />
       <module name="Java" target="1.7" />

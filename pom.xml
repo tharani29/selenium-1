@@ -10,6 +10,7 @@
         <module>WebDriver</module>
         <module>Games</module>
         <module>DesignPatterns</module>
+        <module>Cucumber</module>
     </modules>
     <packaging>pom</packaging>
 
