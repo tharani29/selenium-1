@@ -7,7 +7,7 @@ Feature: Logging into Saleforce
 
 Scenario: Logging in salesforce
 
-  Given I go to "loginURL" on "Mozilla"
+  Given I go to "loginURL" on "Chrome"
   And I enter "loginusername" as "sayem4@gmail.com"
   And I enter "lognpassword" as "sami3092"
   And I click on "loginbutton"

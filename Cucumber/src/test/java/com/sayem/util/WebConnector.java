@@ -1,6 +1,5 @@
 package com.sayem.util;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -60,7 +59,7 @@ public class WebConnector {
         }
 
         // Maximize Window
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
 
         // Implicit wait
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
