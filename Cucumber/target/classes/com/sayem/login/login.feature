@@ -7,7 +7,7 @@ Feature: Logging into Saleforce
 
 Scenario: Logging in salesforce
 
-  Given I go to "http://salesforce.com" on "Mozilla"
+  Given I go to "http://totsy.com" on "Mozilla"
   And I enter "username" as "sayem4@gmail.com"
   And I enter "password" as "sami3092"
   And I click on "loginButton"

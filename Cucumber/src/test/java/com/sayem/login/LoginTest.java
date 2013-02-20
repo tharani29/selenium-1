@@ -8,7 +8,7 @@ public class LoginTest {
 
     @Given("^I go to \"([^\"]*)\" on \"([^\"]*)\"$")
     public void goToSalesforce(String url, String browser){
-        System.out.println("I am going to "+url+"on " + browser);
+        System.out.println("I am going to "+url+" on " + browser);
     }
 
     @And("^I enter \"([^\"]*)\" as \"([^\"]*)\"$")
@@ -21,7 +21,7 @@ public class LoginTest {
         System.out.println("clicking on "+object);
     }
 
-    @Then("login should be \"([^\"]*)\"")
+    @Then("Login should be \"([^\"]*)\"")
     public void loginShouldBeSuccess(String expectedResult){
         System.out.println("Login - "+ expectedResult);
     }
