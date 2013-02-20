@@ -2,7 +2,7 @@ package com.sayem.login;
 
 import cucumber.api.java.en.*;
 
-public class HolyTester {
+public class LoginTest {
     @Given("^I am a [a-zA-Z]{1,} tester$")
     public void I_am_a_bad_tester(){
         System.out.println("********************************");
