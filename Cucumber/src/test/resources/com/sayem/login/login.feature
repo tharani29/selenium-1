@@ -7,10 +7,10 @@ Feature: Logging into Saleforce
 
 Scenario: Logging in salesforce
 
-  Given I go to "http://totsy.com" on "Mozilla"
-  And I enter "username" as "sayem4@gmail.com"
-  And I enter "password" as "sami3092"
-  And I click on "loginButton"
+  Given I go to "loginURL" on "Mozilla"
+  And I enter "loginusername" as "sayem4@gmail.com"
+  And I enter "lognpassword" as "sami3092"
+  And I click on "loginbutton"
   Then Login should be "success"
 
 
