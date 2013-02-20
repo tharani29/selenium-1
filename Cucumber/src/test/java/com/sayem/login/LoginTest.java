@@ -1,14 +1,19 @@
 package com.sayem.login;
 
+import com.sayem.util.WebConnector;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
 public class LoginTest {
 
+    WebConnector driver = new WebConnector();
+
     @Given("^I go to \"([^\"]*)\" on \"([^\"]*)\"$")
-    public void goToSalesforce(String url, String browser){
-        System.out.println("I am going to "+url+" on " + browser);
+    public void goToSalesforce(String URL, String browser){
+        System.out.println("I am going to "+URL+" on " + browser);
+        driver.openBrowser(browser);
+        driver.navigate(URL);
     }
 
     @And("^I enter \"([^\"]*)\" as \"([^\"]*)\"$")
