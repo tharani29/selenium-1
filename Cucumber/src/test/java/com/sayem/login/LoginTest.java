@@ -1,31 +1,29 @@
 package com.sayem.login;
 
-import cucumber.api.java.en.*;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
 public class LoginTest {
-    @Given("^I am a [a-zA-Z]{1,} tester$")
-    public void I_am_a_bad_tester(){
-        System.out.println("********************************");
-        System.out.println("@Given - I_am_a_bad_tester()");
+
+    @Given("^I go to \"([^\"]*)\" on \"([^\"]*)\"$")
+    public void goToSalesforce(String url, String browser){
+        System.out.println("I am going to "+url+"on " + browser);
     }
 
-    @When("^I go to work$")
-    public void I_go_to_work(){
-        System.out.println("@When - I_go_to_work()");
+    @And("^I enter \"([^\"]*)\" as \"([^\"]*)\"$")
+    public void userName(String object, String text){
+        System.out.println("Entering " +object+ "value "+text);
     }
 
-    @Then("^I [a-zA-Z]{1,} it$")
-    public void I_mess_with_it(){
-        System.out.println("@Then - I_mess_with_it()");
+    @And("^I click on \"([^\"]*)\"$")
+    public void loginButton(String object){
+        System.out.println("clicking on "+object);
     }
 
-    @And("^My boss [a-zA-Z]{1,} me$")
-    public void My_boss_fires_me(){
-        System.out.println("@And - My_boss_fires_me()");
+    @Then("login should be \"([^\"]*)\"")
+    public void loginShouldBeSuccess(String expectedResult){
+        System.out.println("Login - "+ expectedResult);
     }
 
-    @But("^The developer [a-zA-Z]{1,} me$")
-    public void The_developer_likes_me(){
-        System.out.println("@But - The_developer_likes_me()");
-    }
 }
