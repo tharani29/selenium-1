@@ -1,7 +1,6 @@
-package com.sayem.cucumber;
+package com.sayem.login;
 
 import cucumber.api.java.en.*;
-import cucumber.runtime.PendingException;
 
 public class HolyTester {
     @Given("^I am a [a-zA-Z]{1,} tester$")
