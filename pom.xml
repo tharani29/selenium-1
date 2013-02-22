@@ -11,6 +11,7 @@
         <module>Games</module>
         <module>DesignPatterns</module>
         <module>Cucumber</module>
+        <module>PageFactory</module>
     </modules>
     <packaging>pom</packaging>
 
