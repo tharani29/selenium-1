@@ -29,7 +29,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.seleniumhq.selenium:selenium-server:2.29.1" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.47" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcpkix-jdk15on:1.47" level="project" />
