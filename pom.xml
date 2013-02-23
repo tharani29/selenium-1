@@ -12,6 +12,7 @@
         <module>DesignPatterns</module>
         <module>Cucumber</module>
         <module>PageFactory</module>
+        <module>IPhoneDriver</module>
     </modules>
     <packaging>pom</packaging>
 

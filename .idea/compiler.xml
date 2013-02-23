@@ -25,6 +25,7 @@
         <module name="Cucumber" />
         <module name="DesignPatterns" />
         <module name="Games" />
+        <module name="IPhoneDriver" />
         <module name="Java" />
         <module name="PageFactory" />
         <module name="WebDriver" />
@@ -34,6 +35,7 @@
       <module name="Cucumber" target="1.7" />
       <module name="DesignPatterns" target="1.7" />
       <module name="Games" target="1.7" />
+      <module name="IPhoneDriver" target="1.7" />
       <module name="Java" target="1.7" />
       <module name="PageFactory" target="1.7" />
       <module name="Selenium" target="1.7" />
