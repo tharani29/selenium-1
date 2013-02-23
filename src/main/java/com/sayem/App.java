@@ -1,14 +1,9 @@
 package com.sayem;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.iphone.IPhoneDriver;
 
-/**
- * Aurthur: Syed Sayem
- *
- */
 public class App{
     public static void main( String[] args ) throws Exception {
 
