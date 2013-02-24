@@ -24,7 +24,6 @@ public class LoginTest {
         LoginPage loginpage = PageFactory.initElements(driver, LoginPage.class);
         LandingPage landingPage = loginpage.doLogin("ssayem+x@totsy.com", "user123");
         landingPage.goToProductProductPage();
-
         landingPage.driver.close();
 
     }
