@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Games/Games.iml" filepath="$PROJECT_DIR$/Games/Games.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" filepath="$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/PageFactory/PageFactory.iml" filepath="$PROJECT_DIR$/PageFactory/PageFactory.iml" />
       <module fileurl="file://$PROJECT_DIR$/Selenium.iml" filepath="$PROJECT_DIR$/Selenium.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDriver/WebDriver.iml" filepath="$PROJECT_DIR$/WebDriver/WebDriver.iml" />
