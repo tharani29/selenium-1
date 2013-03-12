@@ -11,6 +11,7 @@
     <file url="file://$PROJECT_DIR$/DesignPatterns" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Games" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IPhoneDriver" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/JUnit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/abstraction" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/aggregation" charset="UTF-8" />
@@ -73,6 +74,7 @@
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/variables" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/wrapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PageFactory" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TestNG" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebDriver" charset="UTF-8" />
   </component>
 </project>

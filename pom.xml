@@ -13,6 +13,8 @@
         <module>Cucumber</module>
         <module>PageFactory</module>
         <module>IPhoneDriver</module>
+        <module>JUnit</module>
+        <module>TestNG</module>
     </modules>
     <packaging>pom</packaging>
 
