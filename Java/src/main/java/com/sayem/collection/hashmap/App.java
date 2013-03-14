@@ -1,4 +1,4 @@
-package com.sayem.collection.maps;
+package com.sayem.collection.hashmap;
 
 /**
  * Hello world!
