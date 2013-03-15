@@ -17,3 +17,7 @@ Java
 Web Service
 ==================================================
 * Learn SoupUI
+
+
+==================================================
+Why we need to override equals and hashcode in java
