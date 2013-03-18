@@ -26,3 +26,4 @@ Why we need to override equals and hashcode in java
 Discover
 ==================================================
 Gradle - Building automation tool like Maven and Ant
+Static Initialization Blocks in Java
