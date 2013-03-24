@@ -7,6 +7,9 @@ package com.sayem.generics;
 // http://www.programmingforfuture.com/2009/02/re-java-generic-examples-source-code.html
 // http://java2novice.com/java-generics/simple-class/
 // http://learnertobeginner.blogspot.com/2011/06/basics-of-java-generics.html
+// http://mindprod.com/jgloss/generics.html
+
+//http://ted-gao.blogspot.com/search/label/Java%20Generics
 
 public class ABC<T> {
 
@@ -22,7 +25,4 @@ public class ABC<T> {
     T getObj(){
         return obj;
     }
-
-
-
 }
