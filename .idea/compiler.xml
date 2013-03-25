@@ -45,6 +45,7 @@
       <module name="JUnit" target="1.7" />
       <module name="PageFactory" target="1.7" />
       <module name="Selenium" target="1.7" />
+      <module name="SeleniumGrid2" target="1.7" />
       <module name="TestNG" target="1.7" />
       <module name="WebDriver" target="1.7" />
     </bytecodeTargetLevel>
