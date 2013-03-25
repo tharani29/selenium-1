@@ -8,6 +8,8 @@
  *   Open Xcode and cick on iWebDriver project (If not there)                *
  *   Click on "Open Other"                                                   *
  *   Go to /Desktop/selenium/iphone/ and then select "iWebDriver.xcodeproj"  *
+ *   If you don't have a selenium project on desktop                         *
+ *   clone it from github $git clone https://code.google.com/p/selenium/     *
  *   Click compile & run (Play button)                                       *
  *                                                                           *
  *   Come back to IntelliJ IDEA                                              *
