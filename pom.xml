@@ -15,6 +15,7 @@
         <module>IPhoneDriver</module>
         <module>JUnit</module>
         <module>TestNG</module>
+        <module>Appium</module>
     </modules>
     <packaging>pom</packaging>
 
