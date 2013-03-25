@@ -1,0 +1,17 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                Selenium WebDriver for iPhone                              *
+ *              ********************************                             *
+ *    sayem$ cd ~/Desktop/selenium  (Go to selenium project) If no there,    *
+ *    sayem$ git clone https://code.google.com/p/selenium/                   *
+ *    sayem$ git pull                                                        *
+ *                                                                           *
+ *   Open Xcode and cick on iWebDriver project (If not there)                *
+ *   Click on "Open Other"                                                   *
+ *   Go to /Desktop/selenium/iphone/ and then select "iWebDriver.xcodeproj"  *
+ *   Click compile & run (Play button)                                       *
+ *                                                                           *
+ *   Come back to IntelliJ IDEA                                              *
+ *   and run the iPhone Script from IntelliJ IDEA                            *
+ *   It will run on the iPhone Simulator                                     *
+ *                                                                           *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
