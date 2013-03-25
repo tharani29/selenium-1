@@ -16,6 +16,7 @@
         <module>JUnit</module>
         <module>TestNG</module>
         <module>Appium</module>
+        <module>SeleniumGrid2</module>
     </modules>
     <packaging>pom</packaging>
 

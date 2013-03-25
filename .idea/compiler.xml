@@ -30,6 +30,7 @@
         <module name="Java" />
         <module name="JUnit" />
         <module name="PageFactory" />
+        <module name="SeleniumGrid2" />
         <module name="TestNG" />
         <module name="WebDriver" />
       </profile>
