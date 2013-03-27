@@ -11,13 +11,13 @@ package com.sayem.generics;
 
 //http://ted-gao.blogspot.com/search/label/Java%20Generics
 
-public class ABC<T> {
+public class App<T> {
 
     // Declares an object of type T
     T obj;
 
     // The constructor
-    ABC (T obj){
+    App(T obj){
         this.obj = obj;
     }
 
