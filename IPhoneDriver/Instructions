@@ -1,19 +1,23 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
- *                Selenium WebDriver for iPhone                              *
- *              ********************************                             *
- *    sayem$ cd ~/Desktop/selenium  (Go to selenium project) If no there,    *
- *    sayem$ git clone https://code.google.com/p/selenium/                   *
- *    sayem$ git pull                                                        *
- *                                                                           *
- *   Open Xcode and cick on iWebDriver project (If not there)                *
- *   Click on "Open Other"                                                   *
- *   Go to /Desktop/selenium/iphone/ and then select "iWebDriver.xcodeproj"  *
- *   If you don't have a selenium project on desktop                         *
- *   clone it from github $git clone https://code.google.com/p/selenium/     *
- *   Click compile & run (Play button)                                       *
- *                                                                           *
- *   Come back to IntelliJ IDEA                                              *
- *   and run the iPhone Script from IntelliJ IDEA                            *
- *   It will run on the iPhone Simulator                                     *
- *                                                                           *
- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ *                Selenium WebDriver for iPhone                                                            *
+ *              ********************************                                                           *
+ *    http://pavithz.blogspot.com/2012/09/iwebdriver-on-ipadiphone.html                                    *
+ *    sayem$ cd ~/Desktop/selenium  (Go to selenium project) If no there,                                  *
+ *    sayem$ git clone https://code.google.com/p/selenium/                                                 *
+ *    sayem$ git pull                                                                                      *
+ *                                                                                                         *
+ *   Open Xcode and cick on iWebDriver project (If not there)                                              *
+ *   Click on "Open Other"                                                                                 *
+ *   Go to /Desktop/selenium/iphone/ and then select "iWebDriver.xcodeproj"                                *
+ *   If you don't have a selenium project on desktop                                                       *
+ *   clone it from github $git clone https://code.google.com/p/selenium/                                   *
+                                                                                                           *
+ *   Edit Valid Architectures – Enter armv7, Also add i386 as a separate entity                            *
+     Under Code Signing Identity: Select iPhoneDeveloper under 'Automatic profile Selector(Recommended)'   *
+ *   Click compile & run (Play button)                                                                     *
+ *                                                                                                         *
+ *   Come back to IntelliJ IDEA                                                                            *
+ *   and run the iPhone Script from IntelliJ IDEA                                                          *
+ *   It will run on the iPhone Simulator                                                                   *
+ *                                                                                                         *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
