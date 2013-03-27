@@ -22,17 +22,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Appium" />
-        <module name="Cucumber" />
-        <module name="DesignPatterns" />
-        <module name="Games" />
-        <module name="IPhoneDriver" />
-        <module name="Java" />
-        <module name="JUnit" />
-        <module name="PageFactory" />
-        <module name="SeleniumGrid2" />
-        <module name="TestNG" />
-        <module name="WebDriver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

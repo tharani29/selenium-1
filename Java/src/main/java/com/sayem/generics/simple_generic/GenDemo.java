@@ -9,6 +9,11 @@ public class GenDemo {
         // Show the type of data used by iOb.
         iOb.showType();
 
+        // Get the value of iOb.
+        //  no cast is needed.
+        int v = iOb.getOb();
+        System.out.println("value: " + v);
+
         // Create a Gen reference for String
         Gen<String> strOb = new Gen<String>("Generic Test");
 
