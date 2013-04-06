@@ -1,6 +1,6 @@
 package com.sayem.factory;
 
-import org.testng.Assert;
+import org.junit.Assert;
 
 /**
  * Hello world!
