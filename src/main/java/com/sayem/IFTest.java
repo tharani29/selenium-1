@@ -1,6 +1,6 @@
 package com.sayem;
 
-public class IfTest {
+public class IFTest {
     public static void main(String[] args) {
         int x = 3;
         if (x == 3){
