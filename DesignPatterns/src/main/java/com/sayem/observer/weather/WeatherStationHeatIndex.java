@@ -1,7 +1,5 @@
 package com.sayem.observer.weather;
 
-import java.util.*;
-
 public class WeatherStationHeatIndex {
 
 	public static void main(String[] args) {
