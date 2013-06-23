@@ -17,6 +17,7 @@
         <module>TestNG</module>
         <module>Appium</module>
         <module>SeleniumGrid2</module>
+        <module>JavaForTesters</module>
     </modules>
     <packaging>pom</packaging>
 

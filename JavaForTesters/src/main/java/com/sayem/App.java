@@ -4,7 +4,7 @@ package com.sayem;
  * Hello world!
  *
  */
-public class AppTest
+public class App 
 {
     public static void main( String[] args )
     {
