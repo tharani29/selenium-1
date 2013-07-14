@@ -18,6 +18,7 @@
         <module>Appium</module>
         <module>SeleniumGrid2</module>
         <module>JavaForTesters</module>
+        <module>Tutorials</module>
     </modules>
     <packaging>pom</packaging>
 

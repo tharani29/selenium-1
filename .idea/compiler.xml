@@ -33,6 +33,7 @@
         <module name="PageFactory" />
         <module name="SeleniumGrid2" />
         <module name="TestNG" />
+        <module name="Tutorials" />
         <module name="WebDriver" />
       </profile>
     </annotationProcessing>
@@ -49,6 +50,7 @@
       <module name="Selenium" target="1.7" />
       <module name="SeleniumGrid2" target="1.7" />
       <module name="TestNG" target="1.7" />
+      <module name="Tutorials" target="1.7" />
       <module name="WebDriver" target="1.7" />
     </bytecodeTargetLevel>
   </component>

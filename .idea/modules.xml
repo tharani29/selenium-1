@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/Selenium.iml" filepath="$PROJECT_DIR$/Selenium.iml" />
       <module fileurl="file://$PROJECT_DIR$/SeleniumGrid2/SeleniumGrid2.iml" filepath="$PROJECT_DIR$/SeleniumGrid2/SeleniumGrid2.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestNG/TestNG.iml" filepath="$PROJECT_DIR$/TestNG/TestNG.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tutorials/Tutorials.iml" filepath="$PROJECT_DIR$/Tutorials/Tutorials.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDriver/WebDriver.iml" filepath="$PROJECT_DIR$/WebDriver/WebDriver.iml" />
     </modules>
   </component>
