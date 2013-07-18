@@ -19,6 +19,7 @@
         <module>SeleniumGrid2</module>
         <module>JavaForTesters</module>
         <module>Tutorials</module>
+        <module>Books</module>
     </modules>
     <packaging>pom</packaging>
 

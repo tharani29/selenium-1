@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Appium/Appium.iml" filepath="$PROJECT_DIR$/Appium/Appium.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Books/Books.iml" filepath="$PROJECT_DIR$/Books/Books.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cucumber/Cucumber.iml" filepath="$PROJECT_DIR$/Cucumber/Cucumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/Games/Games.iml" filepath="$PROJECT_DIR$/Games/Games.iml" />

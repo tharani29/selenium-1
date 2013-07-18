@@ -23,6 +23,7 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Appium" />
+        <module name="Books" />
         <module name="Cucumber" />
         <module name="DesignPatterns" />
         <module name="Games" />
@@ -39,6 +40,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Appium" target="1.7" />
+      <module name="Books" target="1.7" />
       <module name="Cucumber" target="1.7" />
       <module name="DesignPatterns" target="1.7" />
       <module name="Games" target="1.7" />
