@@ -1,4 +1,4 @@
-package com.sayem;
+package com.sayem.thinking_in_java;
 
 /**
  * Hello world!
