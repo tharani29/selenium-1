@@ -18,5 +18,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.5</version>
+        </dependency>
     </dependencies>
 </project>
