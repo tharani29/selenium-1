@@ -1,4 +1,4 @@
-package com.sayem;
+package com.sayem.rithustutorials;
 
 /**
  * Hello world!
