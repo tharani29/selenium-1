@@ -1,13 +1,7 @@
 package com.sayem.testcases;
 
-import com.sayem.util.TestUtil;
-import com.sayem.util.Xls_Reader;
-import org.testng.SkipException;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
-
 public class LoginTest {
-
+/*
     @BeforeTest
     public void checkRunmode(){
         Xls_Reader xls = new Xls_Reader("src/main/java/com/sayem/data/Test Cases.xlsx");
@@ -21,5 +15,5 @@ public class LoginTest {
     public void sampleTest(){
         System.out.println("Executing login test");
     }
-
+*/
 }
