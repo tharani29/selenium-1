@@ -1,15 +1,15 @@
 package com.sayem.businessclasses;
 
+import com.sayem.pages.Dashboard;
 import com.sayem.pages.HomePage;
-import com.sayem.pages.SignupPage;
+import com.sayem.pages.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
-public class LoginTest {
-
+public class BasicInfoTest {
     public static void main(String [] args){
 
         // Chrome Driver Path
@@ -20,7 +20,8 @@ public class LoginTest {
         driver.navigate().to("https://www.interviewstreet.com");
 
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
-        homePage.login("sayem4@gmail.com", "user123");
+        Dashboard dashboard = homePage.login("sayem4@gmail.com", "user123");
+        dashboard.settingMenu();
 
 
     }
