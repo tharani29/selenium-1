@@ -1,4 +1,4 @@
-package com.sayem.rough.businessclasses;
+package com.sayem.businessclasses;
 
 import com.sayem.pages.LandingPage;
 import com.sayem.pages.LoginPage;
