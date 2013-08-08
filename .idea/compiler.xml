@@ -31,6 +31,7 @@
         <module name="Java" />
         <module name="JavaForTesters" />
         <module name="JUnit" />
+        <module name="LearnVest" />
         <module name="PageFactory" />
         <module name="SeleniumGrid2" />
         <module name="TestNG" />
@@ -48,6 +49,7 @@
       <module name="Java" target="1.7" />
       <module name="JavaForTesters" target="1.7" />
       <module name="JUnit" target="1.7" />
+      <module name="LearnVest" target="1.7" />
       <module name="PageFactory" target="1.7" />
       <module name="Selenium" target="1.7" />
       <module name="SeleniumGrid2" target="1.7" />

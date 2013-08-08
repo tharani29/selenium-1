@@ -20,6 +20,7 @@
         <module>JavaForTesters</module>
         <module>Tutorials</module>
         <module>Books</module>
+        <module>LearnVest</module>
     </modules>
     <packaging>pom</packaging>
 
