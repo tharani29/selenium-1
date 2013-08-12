@@ -34,8 +34,11 @@ public class App {
     @Test
     public void testUIComputation() throws Exception {
         driver.findElement(By.xpath("//window[1]/button[1]")).click();
-
-
+        driver.findElement(By.xpath("//window[1]/scrollview[1]/textfield[2]")).sendKeys("test11@ilearnvest.com");
+        driver.findElement(By.xpath("//window[1]/scrollview[1]/textfield[3]")).sendKeys("test11@ilearnvest.com");
+        driver.findElement(By.xpath("//window[1]/scrollview[1]/textfield[4]")).sendKeys("user123");
+        driver.findElement(By.xpath("//window[1]/scrollview[1]/textfield[5]")).sendKeys("user123");
+        driver.findElement(By.xpath("//window[1]/scrollview[1]/button[5]")).click();
 
     }
 
