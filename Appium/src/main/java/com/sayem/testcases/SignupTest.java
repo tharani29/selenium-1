@@ -1,6 +1,7 @@
 package com.sayem.testcases;
 
-import com.sayem.pages.*;
+import com.sayem.pages.LandingPage;
+import com.sayem.pages.SignupPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -8,6 +9,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
 import java.io.File;
 import java.net.URL;
 import java.util.Random;
