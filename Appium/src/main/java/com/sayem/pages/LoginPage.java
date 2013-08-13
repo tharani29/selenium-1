@@ -25,6 +25,18 @@ public class LoginPage {
     @FindBy(xpath = "//window[2]/toolbar[1]/button[3]")
     private WebElement doneButton;
 
+    @FindBy(xpath = "//window[1]/button[9]")
+    private WebElement passcodeOne;
+
+    @FindBy(xpath = "//window[1]/button[10]")
+    private WebElement passcodeTwo;
+
+    @FindBy(xpath = "//window[1]/button[11]")
+    private WebElement passcodeThree;
+
+    @FindBy(xpath = "//window[1]/button[12]")
+    private WebElement passcodeFour;
+
     public HomePage loginIn(String emailAddress, String password) throws InterruptedException {
         Thread.sleep(3000L);
         this.emailAddress.sendKeys(emailAddress);
@@ -33,6 +45,23 @@ public class LoginPage {
         this.doneButton.click();
         this.submitButton.click();
 
+        try {
+            passcodeMethod();
+            passcodeMethod();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
         return PageFactory.initElements(driver, HomePage.class);
+    }
+
+    private void passcodeMethod() {
+        try {
+            passcodeOne.click();
+            passcodeTwo.click();
+            passcodeThree.click();
+            passcodeFour.click();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
