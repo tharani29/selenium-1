@@ -28,18 +28,18 @@ public class SignupTest {
         capabilities.setCapability("app", app.getAbsolutePath());
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.manage().deleteAllCookies();
 
     }
 
     @Test
     protected void testUIComputation() throws Exception {
         Random rand = new Random();
-        int random = rand.nextInt(1000);
-        String emailAddress = "test"+random+"@ilearnvest.com";
+        int random = rand.nextInt((2147483647 - 1) + 1);
+        char c = (char)(rand.nextInt(26) + 'a');
+        String emailAddress = "signup"+c+random+c+"@ilearnvest.com";
 
         LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
         SignupPage signupPage = landingPage.signUpAndLogin();
-        signupPage.signUp(emailAddress, "sami3092");
+        signupPage.signUp(emailAddress, "user1234");
     }
 }
