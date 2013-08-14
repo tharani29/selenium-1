@@ -1,12 +1,8 @@
 package com.sayem.testcases;
 
 import com.sayem.pages.SignupPage;
-import com.sayem.pages.SettingsPage;
-import com.sayem.pages.FinancialConsultationPage;
 import com.sayem.pages.HomePage;
 import com.sayem.pages.LandingPage;
-import com.sayem.pages.LearnvastArticlesPage;
-import com.sayem.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;

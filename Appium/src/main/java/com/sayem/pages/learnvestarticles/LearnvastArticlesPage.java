@@ -1,15 +1,16 @@
-package com.sayem.pages;
+package com.sayem.pages.learnvestarticles;
 
+import com.sayem.pages.SignupPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FinancialConsultationPage {
+public class LearnvastArticlesPage {
 
     private WebDriver driver;
 
-    public FinancialConsultationPage(WebDriver driver){
+    public LearnvastArticlesPage(WebDriver driver){
         this.driver = driver;
     }
 

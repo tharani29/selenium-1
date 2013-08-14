@@ -1,5 +1,6 @@
-package com.sayem.pages;
+package com.sayem.pages.moneycenter;
 
+import com.sayem.pages.SignupPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
