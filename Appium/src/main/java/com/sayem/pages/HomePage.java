@@ -22,7 +22,7 @@ public class HomePage {
     @FindBy(xpath = "//window[1]/button[6]")
     private WebElement learnVestArticles;
 
-    @FindBy(xpath = "//window[1]/button[13]")
+    @FindBy(name = "Settings")
     private WebElement Settings;
 
     public MoneyCenterPage goToMoneyCenter(){

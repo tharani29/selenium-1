@@ -25,11 +25,13 @@ public class SettingsPage {
     @FindBy(xpath = "//window[1]/button[5]")
     private WebElement feedbackButton;
 
-    @FindBy(xpath = "//window[1]/button[6]")
-    private WebElement logoutButton;
+    @FindBy(name = "LOG OUT")
+    private WebElement  logoutButton;
 
     @FindBy(xpath = "//window[3]/alert[1]/button[2]")
     private WebElement alertBox;
+
+
 
     public void passcode(){
         passcodeButton.click();
@@ -49,7 +51,7 @@ public class SettingsPage {
 
     public void logout(){
         logoutButton.click();
-        driver.switchTo().alert().accept();
+        alertBox.click();
 
     }
 }

@@ -1,6 +1,12 @@
 package com.sayem.testcases;
 
+import com.sayem.pages.SignupPage;
+import com.sayem.pages.SettingsPage;
+import com.sayem.pages.FinancialConsultationPage;
+import com.sayem.pages.HomePage;
 import com.sayem.pages.LandingPage;
+import com.sayem.pages.LearnvastArticlesPage;
+import com.sayem.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -11,6 +17,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 import java.net.URL;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 public class LogoutTest {
@@ -27,18 +34,22 @@ public class LogoutTest {
         capabilities.setCapability("app", app.getAbsolutePath());
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-        driver.manage().deleteAllCookies();
 
     }
 
     @Test
     protected void testUIComputation() throws Exception {
-
-        String emailAddress = "sayem@ilearnvest.com";
-        String password = "user1234";
+        Random rand = new Random();
+        int random = rand.nextInt((2147483647 - 1) + 1);
+        char c = (char)(rand.nextInt(26) + 'a');
+        String emailAddress = "signup"+c+random+c+"@ilearnvest.com";
 
         LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
-        landingPage.signUpAndLogin().login().loginIn(emailAddress, password).goToSettingsPage().logout();
+        SignupPage signupPage = landingPage.signUpAndLogin();
+        HomePage homePage = signupPage.signUp(emailAddress, "user1234");
+        homePage.goToSettingsPage().logout();
+
+
 
 
     }
