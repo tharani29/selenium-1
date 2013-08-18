@@ -1,0 +1,7 @@
+package com.sayem.headfirst.factory.pizzaaf;
+
+public class ThickCrustDough implements Dough {
+	public String toString() {
+		return "ThickCrust style extra thick crust dough";
+	}
+}
