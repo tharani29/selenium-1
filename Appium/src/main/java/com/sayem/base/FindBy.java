@@ -15,7 +15,7 @@ public final class FindBy {
     For example finding all the elements using id and class name or tagName and xpath etc… or we need to find any one of the id/class/xpath …
     FindBy can help you to do this.
 
-    This idea came to me when I was going thru the page factory source code (ByChained), I found something useful class.
+    This idea came to me when I was going thru the page builder source code (ByChained), I found something useful class.
 
     Look at the following FindBy class, which extends the functionality of existing By classes.
      */
