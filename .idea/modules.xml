@@ -21,6 +21,7 @@
       <module fileurl="file://$PROJECT_DIR$/Tutorials/Tutorials.iml" filepath="$PROJECT_DIR$/Tutorials/Tutorials.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDevelopment/WebDevelopment.iml" filepath="$PROJECT_DIR$/WebDevelopment/WebDevelopment.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDriver/WebDriver.iml" filepath="$PROJECT_DIR$/WebDriver/WebDriver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebDriver2/WebDriver2.iml" filepath="$PROJECT_DIR$/WebDriver2/WebDriver2.iml" />
     </modules>
   </component>
 </project>

@@ -37,6 +37,7 @@
         <module name="TestNG" />
         <module name="Tutorials" />
         <module name="WebDriver" />
+        <module name="WebDriver2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -56,6 +57,7 @@
       <module name="TestNG" target="1.7" />
       <module name="Tutorials" target="1.7" />
       <module name="WebDriver" target="1.7" />
+      <module name="WebDriver2" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
