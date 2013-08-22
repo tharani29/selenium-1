@@ -36,7 +36,6 @@ public class TestBase {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 }
 	
@@ -56,5 +55,4 @@ public class TestBase {
 		driver.quit();
 		driver=null;
 	}
-
 }
