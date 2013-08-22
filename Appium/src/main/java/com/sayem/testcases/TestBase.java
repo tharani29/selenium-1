@@ -5,9 +5,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.Properties;
+import java.util.concurrent.TimeUnit;
 
 public class TestBase {
 
@@ -33,15 +40,16 @@ public class TestBase {
 	}
 }
 	
-	public void initDriver(){
-		if(driver==null){
-		if(CONFIG.getProperty("browser").equals("Mozilla"))
-			driver=new FirefoxDriver();
-		else if(CONFIG.getProperty("browser").equals("IE"))
-			driver=new InternetExplorerDriver();
-		else if(CONFIG.getProperty("browser").equals("Chrome"))
-			driver=new ChromeDriver();
-		}
+	public void initDriver() throws Exception {
+        // set up appium
+        File app = new File("/Users/ssayem/Downloads/LearnVest.app");
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
+        capabilities.setCapability(CapabilityType.VERSION, "6.0");
+        capabilities.setCapability(CapabilityType.PLATFORM, "Mac");
+        capabilities.setCapability("app", app.getAbsolutePath());
+        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	}
 	
 	public void quitDriver(){

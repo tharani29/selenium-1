@@ -18,15 +18,7 @@ public class LoginTest {
 
     @BeforeMethod
     public void setUp() throws Exception {
-        // set up appium
-        File app = new File("/Users/ssayem/Downloads/LearnVest.app");
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
-        capabilities.setCapability(CapabilityType.VERSION, "6.0");
-        capabilities.setCapability(CapabilityType.PLATFORM, "Mac");
-        capabilities.setCapability("app", app.getAbsolutePath());
-        driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
-        driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+
     }
 
     @Test
