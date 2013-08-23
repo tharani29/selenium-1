@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Appium Suite">
+    <!--
+    <listeners>
+        <listener class-name="com.sayem.listener.TestsListenerAdapter" />
+    </listeners>
+    -->
+
+    <test name="Login Test">
+        <classes>
+            <class name="com.sayem.testcases.LoginTest" />
+        </classes>
+    </test>
+
+    <test name="Signup Test">
+        <classes>
+            <class name="com.sayem.testcases.SignupTest" />
+        </classes>
+    </test>
+
+    <test name="Logout Test">
+        <classes>
+            <class name="com.sayem.testcases.LogoutTest" />
+        </classes>
+    </test>
+
+</suite>
