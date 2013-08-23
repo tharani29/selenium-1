@@ -1,4 +1,4 @@
-package com.sayem.pages.moneycenter;
+package com.sayem.pages.mymoney;
 
 import com.sayem.pages.SignupPage;
 import org.openqa.selenium.WebDriver;

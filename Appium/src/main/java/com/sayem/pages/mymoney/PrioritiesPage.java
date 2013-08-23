@@ -1,4 +1,4 @@
-package com.sayem.pages.moneycenter;
+package com.sayem.pages.mymoney;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,5 +7,5 @@ package com.sayem.pages.moneycenter;
  * Time: 5:44 PM
  * To change this template use File | Settings | File Templates.
  */
-public class BudgetPage {
+public class PrioritiesPage {
 }
