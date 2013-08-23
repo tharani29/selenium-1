@@ -25,6 +25,6 @@ public class SignupTest extends TestBase{
 
         LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
         SignupPage signupPage = landingPage.signUpAndLogin();
-        signupPage.signUp(emailAddress, "user1234");
+        signupPage.signUp(emailAddress, "user1234", "Syed", "30");
     }
 }

@@ -36,6 +36,8 @@ public class SignupPage {
     @FindBy(xpath = "//window[2]/toolbar[1]/button[3]")
     private WebElement doneButton;
 
+    //*******************************************************************
+
     @FindBy(xpath = "//window[1]/button[9]")
     private WebElement passcodeOne;
 
@@ -48,6 +50,36 @@ public class SignupPage {
     @FindBy(xpath = "//window[1]/button[12]")
     private WebElement passcodeFour;
 
+    //*******************************************************************
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/textfield[1]")
+    private WebElement profileFirstName;
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/textfield[2]")
+    private WebElement profileAge;
+
+    @FindBy(xpath = "/window[1]/scrollview[1]/webview[1]/text[6]")
+    private WebElement profileMale;
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/text[7]")
+    private WebElement profileFemale;
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/element[1]")
+    private WebElement selectFinancialDecisions;
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/text[11]")
+    private WebElement withMySpouse;
+
+    @FindBy(xpath = "//window[2]/toolbar[1]/button[1]")
+    private WebElement profileDoneButton;
+
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/text[9]")
+    private WebElement profileNextButton;
+
+
+
+
+
 
     public LoginPage login(){
         loginButton.click();
@@ -55,10 +87,24 @@ public class SignupPage {
     }
 
 
-    public HomePage signUp(String emailAddress, String password){
+    public HomePage signUp(String emailAddress, String password, String profileFirstName, String profileAge){
         signupMethod(emailAddress, password);
         passcodeMethod();
         passcodeMethod();
+
+        this.profileFirstName.sendKeys(profileFirstName);
+        this.profileFirstName.sendKeys(profileAge);
+        profileMale.click();
+        selectFinancialDecisions.click();
+        withMySpouse.click();
+        profileDoneButton.click();
+        profileNextButton.click();
+
+
+
+
+
+
         return PageFactory.initElements(driver, HomePage.class);
     }
 
