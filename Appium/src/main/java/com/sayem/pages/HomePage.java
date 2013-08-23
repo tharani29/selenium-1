@@ -1,7 +1,7 @@
 package com.sayem.pages;
 
 import com.sayem.pages.financialconsultation.FinancialConsultationPage;
-import com.sayem.pages.learnvestarticles.LearnvastArticlesPage;
+import com.sayem.pages.myreads.LearnvastArticlesPage;
 import com.sayem.pages.moneycenter.MoneyCenterPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

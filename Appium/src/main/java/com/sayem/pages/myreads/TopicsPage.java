@@ -1,4 +1,4 @@
-package com.sayem.pages.learnvestarticles;
+package com.sayem.pages.myreads;
 
 /**
  * Created with IntelliJ IDEA.

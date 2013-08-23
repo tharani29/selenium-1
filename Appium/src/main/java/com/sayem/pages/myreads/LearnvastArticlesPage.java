@@ -1,4 +1,4 @@
-package com.sayem.pages.learnvestarticles;
+package com.sayem.pages.myreads;
 
 import com.sayem.pages.SignupPage;
 import org.openqa.selenium.WebDriver;
