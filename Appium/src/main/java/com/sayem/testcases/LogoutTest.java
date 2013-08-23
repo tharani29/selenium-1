@@ -18,15 +18,14 @@ public class LogoutTest extends TestBase{
 
     @Test
     protected void testUIComputation() throws Exception {
-        Random rand = new Random();
-        int random = rand.nextInt((2147483647 - 1) + 1);
-        char c = (char)(rand.nextInt(26) + 'a');
-        String emailAddress = "signup"+c+random+c+"@ilearnvest.com";
+        String emailAddress = "sayem@ilearnvest.com";
+        String password = "user1234";
 
         LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
-        SignupPage signupPage = landingPage.signUpAndLogin();
-        HomePage homePage = signupPage.signUp(emailAddress, "user1234");
-        homePage.goToSettingsPage().logout();
+        landingPage.signUpAndLogin().login().loginIn(emailAddress,password)
+                .goToSettingsPage().logout();
+
+
 
 
 
