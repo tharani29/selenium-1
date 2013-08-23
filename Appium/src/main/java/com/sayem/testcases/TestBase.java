@@ -2,9 +2,6 @@ package com.sayem.testcases;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -39,7 +36,7 @@ public class TestBase {
 	}
 }
 	
-	public void initDriver() throws Exception {
+	public void initDriver() throws MalformedURLException {
         // set up appium
         File app = new File("/Users/ssayem/Dropbox/Appium/LearnVest/LearnVest.app");
         DesiredCapabilities capabilities = new DesiredCapabilities();
