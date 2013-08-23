@@ -21,10 +21,10 @@ public class SignupPage {
     @FindBy(xpath = "//window[1]/scrollview[1]/textfield[3]")
     private WebElement confirmEmailAddress;
 
-    @FindBy(xpath = "/window[1]/scrollview[1]/secure[2]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[4]")
     private WebElement password;
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/secure[3]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[5]")
     private WebElement confirmPassword;
 
     @FindBy(xpath = "//window[1]/scrollview[1]/button[5]")
