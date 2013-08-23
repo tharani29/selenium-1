@@ -41,7 +41,7 @@ public class TestBase {
 	
 	public void initDriver() throws Exception {
         // set up appium
-        File app = new File("/Users/ssayem/Downloads/LearnVest.app");
+        File app = new File("/Users/ssayem/Dropbox/Appium/LearnVest/LearnVest.app");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "iOS");
         capabilities.setCapability(CapabilityType.VERSION, "6.0");
