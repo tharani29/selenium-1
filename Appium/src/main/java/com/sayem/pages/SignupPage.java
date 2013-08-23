@@ -12,7 +12,7 @@ public class SignupPage {
         this.driver = driver;
     }
 
-    @FindBy(name = "Log In")
+    @FindBy(name = "//window[1]/scrollview[1]/button[2]")
     private WebElement loginButton;
 
     @FindBy(xpath = "//window[1]/scrollview[1]/textfield[2]")
