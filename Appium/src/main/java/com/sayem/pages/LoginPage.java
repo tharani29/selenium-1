@@ -44,13 +44,6 @@ public class LoginPage {
         this.password.sendKeys(password);
         this.doneButton.click();
         this.submitButton.click();
-
-        try {
-            passcodeMethod();
-            passcodeMethod();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
         return PageFactory.initElements(driver, HomePage.class);
     }
 
