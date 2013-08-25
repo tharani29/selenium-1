@@ -22,6 +22,7 @@
         <module>Books</module>
         <module>LearnVest</module>
         <module>WebDriver2</module>
+        <module>Exercises</module>
     </modules>
     <packaging>pom</packaging>
 

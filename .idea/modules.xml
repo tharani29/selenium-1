@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/Books/Books.iml" filepath="$PROJECT_DIR$/Books/Books.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cucumber/Cucumber.iml" filepath="$PROJECT_DIR$/Cucumber/Cucumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Exercises/Exercises.iml" />
       <module fileurl="file://$PROJECT_DIR$/Games/Games.iml" filepath="$PROJECT_DIR$/Games/Games.iml" />
       <module fileurl="file://$PROJECT_DIR$/Groovy/Groovy.iml" filepath="$PROJECT_DIR$/Groovy/Groovy.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" filepath="$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" />
