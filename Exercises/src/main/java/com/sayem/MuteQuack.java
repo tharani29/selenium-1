@@ -1,4 +1,8 @@
 package com.sayem;
 
-public class MuteQuack {
+public class MuteQuack implements QuackBehavior{
+    @Override
+    public void quack() {
+        System.out.println("<< Silence >>");
+    }
 }
