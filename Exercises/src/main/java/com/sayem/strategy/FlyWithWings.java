@@ -1,4 +1,4 @@
-package com.sayem;
+package com.sayem.strategy;
 
 public class FlyWithWings implements FlyBehavior{
     @Override

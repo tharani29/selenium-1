@@ -1,4 +1,4 @@
-package com.sayem;
+package com.sayem.strategy;
 
 public abstract class Duck {
     FlyBehavior flyBehavior;
