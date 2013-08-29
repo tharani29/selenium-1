@@ -25,10 +25,11 @@ public class AccountPage {
     //    Connect to account username and password
 
 
-    @FindBy(xpath = "//window[1]/tableview[1]/cell[1]/text[1]")
+    @FindBy(xpath = "//window[1]/tableview[1]/cell[1]/textfield[1]")
+    //@FindBy(name = "Username")
     private WebElement userName; // locate by name: Username
 
-    @FindBy(xpath = "//window[1]/tableview[1]/cell[2]/text[1]")
+    @FindBy(xpath = "//window[1]/tableview[1]/cell[2]/secure[1]")
     private WebElement password; // locate by name: Password
 
     @FindBy(xpath = "//window[1]/tableview[1]/group[2]/button[1]")
@@ -45,11 +46,12 @@ public class AccountPage {
     private WebElement doneButton; // locate by name: Done
 
 
-    public void addAnAccount(){
+    public void addAnAccount() throws InterruptedException {
         accountPlusSign.click();
         searchForAnAccount.sendKeys("DAGBANK");
+        Thread.sleep(1000L);
         popUpAccountSearchName.click();
-
+        Thread.sleep(1000L);
         userName.sendKeys("Money2.bank1");
         doneButton.click();
         password.sendKeys("bank1");
