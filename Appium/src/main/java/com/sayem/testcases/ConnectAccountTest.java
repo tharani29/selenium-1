@@ -22,6 +22,6 @@ public class ConnectAccountTest extends TestBase{
 
         LandingPage landingPage = PageFactory.initElements(driver, LandingPage.class);
         landingPage.signUpAndLogin().login().loginIn(emailAddress, password)
-                .goToSettingsPage().accounts();
+                .goToSettingsPage().accounts().addAnAccount();
     }
 }
