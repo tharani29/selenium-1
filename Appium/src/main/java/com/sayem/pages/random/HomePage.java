@@ -30,22 +30,22 @@ public class HomePage {
     @FindBy(name = "Settings")
     private WebElement Settings;
 
-    public MyMoneyPage goToMoneyCenter(){
+    public MyMoneyPage goToMyMoneyPage(){
         moneyCenter.click();
         return PageFactory.initElements(driver, MyMoneyPage.class);
     }
 
-    public MyGoalPage goToMyGoal(){
+    public MyGoalPage goToMyGoalPage(){
         learnVestArticles.click();
         return PageFactory.initElements(driver, MyGoalPage.class);
     }
 
-    public MyReadsPage goToLearnVestArticles(){
+    public MyReadsPage goToMyReadsPage(){
         learnVestArticles.click();
         return PageFactory.initElements(driver, MyReadsPage.class);
     }
 
-    public MyExpertPage goToFinancialConsultation(){
+    public MyExpertPage goToMyExpertPage(){
         financialConsultation.click();
         return PageFactory.initElements(driver, MyExpertPage.class);
     }
