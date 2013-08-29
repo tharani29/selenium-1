@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LearnvastArticlesPage {
+public class MyReadsPage {
 
     private WebDriver driver;
 
-    public LearnvastArticlesPage(WebDriver driver){
+    public MyReadsPage(WebDriver driver){
         this.driver = driver;
     }
 

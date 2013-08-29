@@ -1,7 +1,7 @@
 package com.sayem.pages.random;
 
 import com.sayem.pages.myexpert.MyExpertPage;
-import com.sayem.pages.myreads.LearnvastArticlesPage;
+import com.sayem.pages.myreads.MyReadsPage;
 import com.sayem.pages.mymoney.MoneyCenterPage;
 import com.sayem.pages.settings.SettingsPage;
 import org.openqa.selenium.WebDriver;
@@ -39,9 +39,9 @@ public class HomePage {
         return PageFactory.initElements(driver, MyExpertPage.class);
     }
 
-    public LearnvastArticlesPage goToLearnVestArticles(){
+    public MyReadsPage goToLearnVestArticles(){
         learnVestArticles.click();
-        return PageFactory.initElements(driver, LearnvastArticlesPage.class);
+        return PageFactory.initElements(driver, MyReadsPage.class);
     }
 
     public SettingsPage goToSettingsPage(){
