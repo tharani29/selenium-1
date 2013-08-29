@@ -3,6 +3,7 @@ package com.sayem.pages;
 import com.sayem.pages.myexpert.FinancialConsultationPage;
 import com.sayem.pages.myreads.LearnvastArticlesPage;
 import com.sayem.pages.mymoney.MoneyCenterPage;
+import com.sayem.pages.settings.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
