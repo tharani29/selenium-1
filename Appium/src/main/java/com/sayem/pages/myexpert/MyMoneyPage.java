@@ -6,11 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FinancialConsultationPage {
+public class MyMoneyPage {
 
     private WebDriver driver;
 
-    public FinancialConsultationPage(WebDriver driver){
+    public MyMoneyPage(WebDriver driver){
         this.driver = driver;
     }
 

@@ -1,6 +1,6 @@
 package com.sayem.pages.random;
 
-import com.sayem.pages.myexpert.FinancialConsultationPage;
+import com.sayem.pages.myexpert.MyMoneyPage;
 import com.sayem.pages.myreads.LearnvastArticlesPage;
 import com.sayem.pages.mymoney.MoneyCenterPage;
 import com.sayem.pages.settings.SettingsPage;
@@ -34,9 +34,9 @@ public class HomePage {
         return PageFactory.initElements(driver, MoneyCenterPage.class);
     }
 
-    public FinancialConsultationPage goToFinancialConsultation(){
+    public MyMoneyPage goToFinancialConsultation(){
         financialConsultation.click();
-        return PageFactory.initElements(driver, FinancialConsultationPage.class);
+        return PageFactory.initElements(driver, MyMoneyPage.class);
     }
 
     public LearnvastArticlesPage goToLearnVestArticles(){
