@@ -1,6 +1,7 @@
 package com.sayem.pages.random;
 
 import com.sayem.pages.myexpert.MyExpertPage;
+import com.sayem.pages.mygoal.MyGoalPage;
 import com.sayem.pages.mymoney.MyMoneyPage;
 import com.sayem.pages.myreads.MyReadsPage;
 import com.sayem.pages.settings.SettingsPage;
@@ -34,14 +35,19 @@ public class HomePage {
         return PageFactory.initElements(driver, MyMoneyPage.class);
     }
 
-    public MyExpertPage goToFinancialConsultation(){
-        financialConsultation.click();
-        return PageFactory.initElements(driver, MyExpertPage.class);
+    public MyGoalPage goToMyGoal(){
+        learnVestArticles.click();
+        return PageFactory.initElements(driver, MyGoalPage.class);
     }
 
     public MyReadsPage goToLearnVestArticles(){
         learnVestArticles.click();
         return PageFactory.initElements(driver, MyReadsPage.class);
+    }
+
+    public MyExpertPage goToFinancialConsultation(){
+        financialConsultation.click();
+        return PageFactory.initElements(driver, MyExpertPage.class);
     }
 
     public SettingsPage goToSettingsPage(){
