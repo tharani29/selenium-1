@@ -1,8 +1,10 @@
 package com.sayem.pages.settings;
 
+import com.sayem.pages.mygoal.MyGoalPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class SettingsPage {
 
@@ -37,8 +39,9 @@ public class SettingsPage {
         passcodeButton.click();
     }
 
-    public void accounts(){
+    public AccountPage accounts(){
         accountsButton.click();
+        return PageFactory.initElements(driver, AccountPage.class);
     }
 
     public void helpAndSupport(){
