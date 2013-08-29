@@ -1,4 +1,4 @@
-package com.sayem.pages;
+package com.sayem.pages.random;
 
 import com.sayem.pages.myexpert.FinancialConsultationPage;
 import com.sayem.pages.myreads.LearnvastArticlesPage;

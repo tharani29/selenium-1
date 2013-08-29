@@ -1,13 +1,9 @@
 package com.sayem.testcases;
 
-import com.sayem.pages.HomePage;
-import com.sayem.pages.LandingPage;
-import com.sayem.pages.SignupPage;
+import com.sayem.pages.random.LandingPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import java.util.Random;
 
 public class LogoutTest extends TestBase{
 
