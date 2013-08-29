@@ -17,9 +17,26 @@ public class MyMoneyPage {
     @FindBy(xpath = "//window[1]/button[1]")
     private WebElement signUpLoginButton;
 
+    @FindBy(xpath = "//window[1]/button[2]")
+    private WebElement getStartedButton;
+
+    @FindBy(xpath = "//window[1]/textfield[1]")
+    private WebElement searchForAnAccount;
+
+    @FindBy(xpath = "//window[1]/tableview[1]/cell[1]/text[1]")
+    private WebElement dagBank;
+
+
+
     public SignupPage signUpAndLogin(){
         signUpLoginButton.click();
         return PageFactory.initElements(driver, SignupPage.class);
 
+    }
+
+
+    public void budgetSetup(){
+        getStartedButton.click();
+        searchForAnAccount.sendKeys("dag");
     }
 }
