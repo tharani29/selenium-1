@@ -13,16 +13,16 @@ public class SettingsPage {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//window[1]/button[2]")
+    @FindBy(name = "PASSCODE")
     private WebElement passcodeButton;
 
-    @FindBy(xpath = "//window[1]/button[3]")
+    @FindBy(name = "ACCOUNTS")
     private WebElement accountsButton;
 
-    @FindBy(xpath = "//window[1]/button[4]")
+    @FindBy(name = "HELP & SUPPORT")
     private WebElement helpAndSupportButton;
 
-    @FindBy(xpath = "//window[1]/button[5]")
+    @FindBy(name = "FEEDBACK")
     private WebElement feedbackButton;
 
     @FindBy(name = "LOG OUT")
