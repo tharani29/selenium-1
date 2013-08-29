@@ -41,6 +41,9 @@ public class AccountPage {
     private WebElement backButton; // locate by name: Back
 
 
+    @FindBy(xpath = "//window[2]/toolbar[1]/button[3]")
+    private WebElement doneButton; // locate by name: Done
+
 
     public void addAnAccount(){
         accountPlusSign.click();
@@ -48,7 +51,9 @@ public class AccountPage {
         popUpAccountSearchName.click();
 
         userName.sendKeys("Money2.bank1");
+        doneButton.click();
         password.sendKeys("bank1");
+        doneButton.click();
         submitButton.click();
 
     }
