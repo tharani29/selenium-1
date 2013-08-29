@@ -19,39 +19,42 @@ public class HomePage {
     }
 
     @FindBy(xpath = "//window[1]/button[1]")
-    private WebElement moneyCenter;
+    private WebElement myMoneyButton;
 
     @FindBy(xpath = "//window[1]/button[3]")
-    private WebElement financialConsultation;
+    private WebElement myGoalsButton;
 
     @FindBy(xpath = "//window[1]/button[6]")
-    private WebElement learnVestArticles;
+    private WebElement myReadsButton;
+
+    @FindBy(xpath = "//window[1]/button[3]")
+    private WebElement myExpertButton;
 
     @FindBy(name = "Settings")
-    private WebElement Settings;
+    private WebElement SettingsButton;
 
     public MyMoneyPage goToMyMoneyPage(){
-        moneyCenter.click();
+        myMoneyButton.click();
         return PageFactory.initElements(driver, MyMoneyPage.class);
     }
 
     public MyGoalPage goToMyGoalPage(){
-        learnVestArticles.click();
+        myReadsButton.click();
         return PageFactory.initElements(driver, MyGoalPage.class);
     }
 
     public MyReadsPage goToMyReadsPage(){
-        learnVestArticles.click();
+        myReadsButton.click();
         return PageFactory.initElements(driver, MyReadsPage.class);
     }
 
     public MyExpertPage goToMyExpertPage(){
-        financialConsultation.click();
+        myExpertButton.click();
         return PageFactory.initElements(driver, MyExpertPage.class);
     }
 
     public SettingsPage goToSettingsPage(){
-        Settings.click();
+        SettingsButton.click();
         return PageFactory.initElements(driver, SettingsPage.class);
     }
 }
