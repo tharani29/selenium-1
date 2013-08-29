@@ -1,8 +1,8 @@
 package com.sayem.pages.random;
 
 import com.sayem.pages.myexpert.MyExpertPage;
+import com.sayem.pages.mymoney.MyMoneyPage;
 import com.sayem.pages.myreads.MyReadsPage;
-import com.sayem.pages.mymoney.MoneyCenterPage;
 import com.sayem.pages.settings.SettingsPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,9 +29,9 @@ public class HomePage {
     @FindBy(name = "Settings")
     private WebElement Settings;
 
-    public MoneyCenterPage goToMoneyCenter(){
+    public MyMoneyPage goToMoneyCenter(){
         moneyCenter.click();
-        return PageFactory.initElements(driver, MoneyCenterPage.class);
+        return PageFactory.initElements(driver, MyMoneyPage.class);
     }
 
     public MyExpertPage goToFinancialConsultation(){

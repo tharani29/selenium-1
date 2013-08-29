@@ -1,11 +1,25 @@
 package com.sayem.pages.mymoney;
 
-/**
- * Created with IntelliJ IDEA.
- * User: ssayem
- * Date: 8/29/13
- * Time: 3:38 PM
- * To change this template use File | Settings | File Templates.
- */
+import com.sayem.pages.random.SignupPage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 public class MyMoneyPage {
+
+    private WebDriver driver;
+
+    public MyMoneyPage(WebDriver driver){
+        this.driver = driver;
+    }
+
+    @FindBy(xpath = "//window[1]/button[1]")
+    private WebElement signUpLoginButton;
+
+    public SignupPage signUpAndLogin(){
+        signUpLoginButton.click();
+        return PageFactory.initElements(driver, SignupPage.class);
+
+    }
 }
