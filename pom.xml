@@ -23,6 +23,7 @@
         <module>LearnVest</module>
         <module>WebDriver2</module>
         <module>Exercises</module>
+        <module>YouTube</module>
     </modules>
     <packaging>pom</packaging>
 
