@@ -3,16 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Appium/Appium.iml" filepath="$PROJECT_DIR$/Appium/Appium.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Books/Books.iml" filepath="$PROJECT_DIR$/Books/Books.iml" />
       <module fileurl="file://$PROJECT_DIR$/Cucumber/Cucumber.iml" filepath="$PROJECT_DIR$/Cucumber/Cucumber.iml" />
       <module fileurl="file://$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" filepath="$PROJECT_DIR$/DesignPatterns/DesignPatterns.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Exercises/Exercises.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Games/Games.iml" filepath="$PROJECT_DIR$/Games/Games.iml" />
       <module fileurl="file://$PROJECT_DIR$/Groovy/Groovy.iml" filepath="$PROJECT_DIR$/Groovy/Groovy.iml" />
       <module fileurl="file://$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" filepath="$PROJECT_DIR$/IPhoneDriver/IPhoneDriver.iml" />
       <module fileurl="file://$PROJECT_DIR$/JUnit/JUnit.iml" filepath="$PROJECT_DIR$/JUnit/JUnit.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java/Java.iml" filepath="$PROJECT_DIR$/Java/Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/JavaForTesters/JavaForTesters.iml" filepath="$PROJECT_DIR$/JavaForTesters/JavaForTesters.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaScript/JavaScript.iml" filepath="$PROJECT_DIR$/JavaScript/JavaScript.iml" />
       <module fileurl="file://$PROJECT_DIR$/LearnVest/LearnVest.iml" filepath="$PROJECT_DIR$/LearnVest/LearnVest.iml" />
       <module fileurl="file://$PROJECT_DIR$/PageFactory/PageFactory.iml" filepath="$PROJECT_DIR$/PageFactory/PageFactory.iml" />
@@ -22,7 +18,6 @@
       <module fileurl="file://$PROJECT_DIR$/Tutorials/Tutorials.iml" filepath="$PROJECT_DIR$/Tutorials/Tutorials.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDevelopment/WebDevelopment.iml" filepath="$PROJECT_DIR$/WebDevelopment/WebDevelopment.iml" />
       <module fileurl="file://$PROJECT_DIR$/WebDriver/WebDriver.iml" filepath="$PROJECT_DIR$/WebDriver/WebDriver.iml" />
-      <module fileurl="file://$PROJECT_DIR$/WebDriver2/WebDriver2.iml" filepath="$PROJECT_DIR$/WebDriver2/WebDriver2.iml" />
       <module fileurl="file://$PROJECT_DIR$/YouTube/YouTube.iml" filepath="$PROJECT_DIR$/YouTube/YouTube.iml" />
     </modules>
   </component>

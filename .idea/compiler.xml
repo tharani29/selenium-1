@@ -23,14 +23,10 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Appium" />
-        <module name="Books" />
         <module name="Cucumber" />
         <module name="DesignPatterns" />
-        <module name="Exercises" />
-        <module name="Games" />
         <module name="IPhoneDriver" />
         <module name="Java" />
-        <module name="JavaForTesters" />
         <module name="JUnit" />
         <module name="LearnVest" />
         <module name="PageFactory" />
@@ -38,7 +34,6 @@
         <module name="TestNG" />
         <module name="Tutorials" />
         <module name="WebDriver" />
-        <module name="WebDriver2" />
         <module name="YouTube" />
       </profile>
     </annotationProcessing>
