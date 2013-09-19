@@ -1,6 +1,6 @@
 package com.sayem.interfaces;
 
-public class IAssert {
+public interface IAssert {
 
 
 }

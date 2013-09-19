@@ -8,7 +8,6 @@
     <modules>
         <module>Java</module>
         <module>WebDriver</module>
-        <module>Games</module>
         <module>DesignPatterns</module>
         <module>Cucumber</module>
         <module>PageFactory</module>
@@ -17,12 +16,8 @@
         <module>TestNG</module>
         <module>Appium</module>
         <module>SeleniumGrid2</module>
-        <module>JavaForTesters</module>
         <module>Tutorials</module>
-        <module>Books</module>
         <module>LearnVest</module>
-        <module>WebDriver2</module>
-        <module>Exercises</module>
         <module>YouTube</module>
     </modules>
     <packaging>pom</packaging>
@@ -40,7 +35,7 @@
     </licenses>
 
     <properties>
-        <org.selenium-version>2.33.0</org.selenium-version>
+        <org.selenium-version>2.35.0</org.selenium-version>
         <org.fitnesse-version>20130531</org.fitnesse-version>
         <jdk.version>1.7</jdk.version>
         <org.springframework-version>3.2.1.RELEASE</org.springframework-version>
