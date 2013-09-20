@@ -3,11 +3,8 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Appium" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Books" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Cucumber" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/DesignPatterns" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Exercises" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/Games" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/IPhoneDriver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/JUnit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java" charset="UTF-8" />
@@ -71,14 +68,12 @@
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/utilclass" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/variables" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Java/src/main/java/com/sayem/wrapper" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/JavaForTesters" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/LearnVest" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/PageFactory" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/SeleniumGrid2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/TestNG" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Tutorials" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/WebDriver" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/WebDriver2" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/YouTube" charset="UTF-8" />
   </component>
 </project>
