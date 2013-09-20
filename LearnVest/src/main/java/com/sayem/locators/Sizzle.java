@@ -8,10 +8,11 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 @SuppressWarnings("unchecked")
-public class SizzleSelector {
+public class Sizzle {
+
     private JavascriptExecutor driver;
 
-    public SizzleSelector(WebDriver webDriver) {
+    public Sizzle(WebDriver webDriver) {
         driver = (JavascriptExecutor) webDriver;
     }
     public WebElement findElementBySizzleCss(String using) {

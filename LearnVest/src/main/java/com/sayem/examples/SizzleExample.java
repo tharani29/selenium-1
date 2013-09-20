@@ -1,6 +1,6 @@
 package com.sayem.examples;
 
-import com.sayem.locators.SizzleSelector;
+import com.sayem.locators.Sizzle;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 public class SizzleExample {
 
     private static WebDriver driver;
-    SizzleSelector sizzle;
+    Sizzle sizzle;
 
     @BeforeClass
     public void setUp() {
-        driver = new FirefoxDriver(); sizzle = new SizzleSelector(driver);
+        driver = new FirefoxDriver(); sizzle = new Sizzle(driver);
         driver.get("http://selenium.polteq.com/prestashop/");
     }
 
