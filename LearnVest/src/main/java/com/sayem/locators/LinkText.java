@@ -10,7 +10,7 @@ public class LinkText implements IClick {
 
     @Override
     public void click(String selector) {
-        By.linkText(selector);
+        driver.findElement(By.linkText(selector)).click();
     }
 
 }

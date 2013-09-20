@@ -10,6 +10,6 @@ public class Id implements IClick {
 
     @Override
     public void click(String selector) {
-        By.id(selector);
+        driver.findElement(By.id(selector)).click();
     }
 }

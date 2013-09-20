@@ -1,6 +1,6 @@
 package com.sayem.examples;
 
-import com.sayem.locators.Sizzle;
+import com.sayem.base.SizzleSelector;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
@@ -11,11 +11,11 @@ import org.testng.annotations.Test;
 public class SizzleExample {
 
     private static WebDriver driver;
-    Sizzle sizzle;
+    SizzleSelector sizzleSelector;
 
     @BeforeClass
     public void setUp() {
-        driver = new FirefoxDriver(); sizzle = new Sizzle(driver);
+        driver = new FirefoxDriver(); sizzleSelector = new SizzleSelector(driver);
         driver.get("http://selenium.polteq.com/prestashop/");
     }
 
@@ -27,9 +27,9 @@ public class SizzleExample {
 
     @Test
     public void useSizzleSelector() {
-        sizzle.findElementBySizzleCss("input#search_query_top").sendKeys("ipod nano");
-        sizzle.findElementBySizzleCss("input[name='submit_search']").click();
-        String searchHeader = sizzle.findElementBySizzleCss("H1").getText().toLowerCase();
+        sizzleSelector.findElementBySizzleCss("input#search_query_top").sendKeys("ipod nano");
+        sizzleSelector.findElementBySizzleCss("input[name='submit_search']").click();
+        String searchHeader = sizzleSelector.findElementBySizzleCss("H1").getText().toLowerCase();
         Assert.assertTrue(searchHeader.contains("ipod nano"));
     }
 }

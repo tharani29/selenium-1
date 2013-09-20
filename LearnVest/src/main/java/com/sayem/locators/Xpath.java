@@ -10,6 +10,6 @@ public class Xpath implements IClick {
 
     @Override
     public void click(String selector) {
-        By.xpath(selector);
+        driver.findElement(By.xpath(selector)).click();
     }
 }

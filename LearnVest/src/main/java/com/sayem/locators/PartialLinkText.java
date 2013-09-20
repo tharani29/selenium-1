@@ -10,6 +10,6 @@ public class PartialLinkText implements IClick{
 
     @Override
     public void click(String selector) {
-        By.partialLinkText(selector);
+        driver.findElement(By.partialLinkText(selector)).click();
     }
 }

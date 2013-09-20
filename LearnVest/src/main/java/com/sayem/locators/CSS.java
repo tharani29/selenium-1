@@ -9,6 +9,6 @@ public class CSS implements IClick {
 
     @Override
     public void click(String selector) {
-        By.cssSelector(selector);
+        driver.findElement(By.cssSelector(selector)).click();
     }
 }

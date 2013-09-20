@@ -2,14 +2,15 @@ package com.sayem.locators;
 
 import com.sayem.interfaces.IClick;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
 
 public class TagName implements IClick {
 
-    private JavascriptExecutor driver;
+    private WebDriver driver;
 
     @Override
     public void click(String selector) {
-        By.tagName(selector);
+        driver.findElement(By.tagName(selector)).click();
     }
 }
+
