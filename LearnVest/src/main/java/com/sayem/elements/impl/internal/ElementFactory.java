@@ -10,7 +10,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
- * IElement factory for wrapped elements. Similar to {@link org.openqa.selenium.support.PageFactory}
+ * IElement factorymethod for wrapped elements. Similar to {@link org.openqa.selenium.support.PageFactory}
  */
 public class ElementFactory {
 
