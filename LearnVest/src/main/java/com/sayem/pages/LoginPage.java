@@ -49,4 +49,13 @@ public class LoginPage extends BasePage {
         iForgotButton.click();
         return PageFactory.initElements(driver, ResetPasswordPage.class);
     }
+
+    public AdminPanel logMeInToAdminPanel(String email, String password){
+        this.emailAddress.clear();
+        this.emailAddress.sendKeys(email);
+        this.password.clear();
+        this.password.sendKeys(password);
+        this.logInButton.click();
+        return PageFactory.initElements(driver, AdminPanel.class);
+    }
 }

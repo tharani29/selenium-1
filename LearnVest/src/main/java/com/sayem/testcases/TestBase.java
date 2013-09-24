@@ -22,10 +22,10 @@ public abstract class TestBase {
     public static Properties OR = null;
     public static boolean isLoggedIn=false;
 
-    String loginEmail;
-    String loginPassword;
-    String signupEmail;
-    String signupPassword;
+    public String loginEmail;
+    public String loginPassword;
+    public String signupEmail;
+    public String signupPassword;
 
     public TestBase(){
 
