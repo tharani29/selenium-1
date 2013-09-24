@@ -37,7 +37,9 @@ public class LoginPage extends BasePage {
     private WebElement iForgotButton;
 
     public DashboardPage logMeIn(String email, String password){
+        this.emailAddress.clear();
         this.emailAddress.sendKeys(email);
+        this.password.clear();
         this.password.sendKeys(password);
         this.logInButton.click();
         return PageFactory.initElements(driver, DashboardPage.class);

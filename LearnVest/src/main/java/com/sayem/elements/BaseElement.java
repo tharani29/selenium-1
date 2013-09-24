@@ -1,4 +1,4 @@
 package com.sayem.elements;
 
-public class BaseElement {
+public abstract class BaseElement {
 }

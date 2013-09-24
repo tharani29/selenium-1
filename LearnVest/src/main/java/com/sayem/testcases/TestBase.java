@@ -15,7 +15,7 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public abstract class TestBase {
 
     public static WebDriver driver = null;
     public static Properties CONFIG = null;
