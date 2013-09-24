@@ -35,11 +35,11 @@ public class TestBase {
             OR = new Properties();
             try {
                 // Load the Config Properties
-                FileInputStream fs = new FileInputStream("src/main/java/com/learnvest/configurations/config.properties");
+                FileInputStream fs = new FileInputStream("LearnVest/src/main/java/com/sayem/configurations/config.properties");
                 CONFIG.load(fs);
 
                 // Load the OR Properties
-                fs= new FileInputStream("src/main/java/com/learnvest/configurations/OR.properties");
+                fs= new FileInputStream("LearnVest/src/main/java/com/sayem/configurations/OR.properties");
                 OR.load(fs);
             } catch (Exception e) {
                 return;

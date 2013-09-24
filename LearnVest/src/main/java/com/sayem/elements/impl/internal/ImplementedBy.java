@@ -1,6 +1,6 @@
 package com.sayem.elements.impl.internal;
 
-import com.learnvest.elements.impl.ElementImpl;
+import com.sayem.elements.impl.ElementImpl;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

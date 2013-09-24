@@ -1,6 +1,6 @@
 package com.sayem.elements.impl.internal;
 
-import com.learnvest.elements.Element;
+import com.sayem.elements.Element;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.internal.Locatable;
 import org.openqa.selenium.internal.WrapsElement;
