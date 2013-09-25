@@ -15,17 +15,17 @@ import java.util.Properties;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public abstract class TestBase {
 
     public static WebDriver driver = null;
     public static Properties CONFIG = null;
     public static Properties OR = null;
     public static boolean isLoggedIn=false;
 
-    String loginEmail;
-    String loginPassword;
-    String signupEmail;
-    String signupPassword;
+    public String loginEmail;
+    public String loginPassword;
+    public String signupEmail;
+    public String signupPassword;
 
     public TestBase(){
 
@@ -35,11 +35,11 @@ public class TestBase {
             OR = new Properties();
             try {
                 // Load the Config Properties
-                FileInputStream fs = new FileInputStream("src/main/java/com/learnvest/configurations/config.properties");
+                FileInputStream fs = new FileInputStream("LearnVest/src/main/java/com/sayem/configurations/config.properties");
                 CONFIG.load(fs);
 
                 // Load the OR Properties
-                fs= new FileInputStream("src/main/java/com/learnvest/configurations/OR.properties");
+                fs= new FileInputStream("LearnVest/src/main/java/com/sayem/configurations/OR.properties");
                 OR.load(fs);
             } catch (Exception e) {
                 return;

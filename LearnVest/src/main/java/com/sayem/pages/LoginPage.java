@@ -37,7 +37,9 @@ public class LoginPage extends BasePage {
     private WebElement iForgotButton;
 
     public DashboardPage logMeIn(String email, String password){
+        this.emailAddress.clear();
         this.emailAddress.sendKeys(email);
+        this.password.clear();
         this.password.sendKeys(password);
         this.logInButton.click();
         return PageFactory.initElements(driver, DashboardPage.class);
@@ -46,5 +48,14 @@ public class LoginPage extends BasePage {
     public ResetPasswordPage takeMeToResetPasswordPage(){
         iForgotButton.click();
         return PageFactory.initElements(driver, ResetPasswordPage.class);
+    }
+
+    public AdminPanel logMeInToAdminPanel(String email, String password){
+        this.emailAddress.clear();
+        this.emailAddress.sendKeys(email);
+        this.password.clear();
+        this.password.sendKeys(password);
+        this.logInButton.click();
+        return PageFactory.initElements(driver, AdminPanel.class);
     }
 }

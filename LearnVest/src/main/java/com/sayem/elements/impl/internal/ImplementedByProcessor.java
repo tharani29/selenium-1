@@ -1,6 +1,6 @@
 package com.sayem.elements.impl.internal;
 
-import com.learnvest.elements.Element;
+import com.sayem.elements.Element;
 
 /**
  * Processes the iface type into a useful class reference for wrapping WebElements.

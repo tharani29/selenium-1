@@ -1,6 +1,6 @@
 package com.sayem.elements.impl.internal;
 
-import com.learnvest.elements.Element;
+import com.sayem.elements.Element;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.learnvest.elements.impl.internal.ImplementedByProcessor.getWrapperClass;
+import static com.sayem.elements.impl.internal.ImplementedByProcessor.getWrapperClass;
 
 /**
  * Wraps a list of WebElements in multiple wrapped elements.

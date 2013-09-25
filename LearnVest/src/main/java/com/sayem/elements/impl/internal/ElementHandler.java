@@ -1,6 +1,6 @@
 package com.sayem.elements.impl.internal;
 
-import com.learnvest.elements.Element;
+import com.sayem.elements.Element;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import static com.learnvest.elements.impl.internal.ImplementedByProcessor.getWrapperClass;
+import static com.sayem.elements.impl.internal.ImplementedByProcessor.getWrapperClass;
 
 /**
  * Replaces DefaultLocatingElementHandler. Simply opens it up to descendants of the WebElement interface, and other
