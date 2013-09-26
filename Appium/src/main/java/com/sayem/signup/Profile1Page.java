@@ -1,5 +1,6 @@
 package com.sayem.signup;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,36 +14,38 @@ public class Profile1Page {
         this.driver = driver;
     }
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/textfield[1]")
     private WebElement firstName;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/textfield[2]")
     private WebElement age;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Male")
     private WebElement maleButton;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "female")
     private WebElement femaleButton;
 
     // I Make Financial Decisions...
-    @FindBy(name = "Sign Up / Log In")
-    private WebElement dropDownTab;
+    @FindBy(xpath = "//window[1]/scrollview[1]/webview[1]/element[1]")
+    private WebElement selectTab;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(xpath = "Sign Up / Log In")
     private WebElement withMySpouseLink;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(xpath = "Sign Up / Log In")
     private WebElement nextButton;
 
-    public Profile2Page signUpAndLogin(){
-        firstName.sendKeys();
-        age.sendKeys();
-        maleButton.click();
-        dropDownTab.click();
-        withMySpouseLink.click();
-        nextButton.click();
+    @FindBy(name = "Done")
+    private WebElement doneButton;
 
+    public Profile2Page aBitAboutYourself(){
+        firstName.sendKeys("Syed");
+        doneButton.click();
+        age.sendKeys("30");
+        doneButton.click();
+        maleButton.click();
+        selectTab.sendKeys(Keys.ARROW_DOWN);
         return PageFactory.initElements(driver, Profile2Page.class);
 
     }

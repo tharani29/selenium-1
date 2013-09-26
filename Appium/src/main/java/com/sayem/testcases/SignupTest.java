@@ -1,7 +1,6 @@
 package com.sayem.testcases;
 
-import com.sayem.pages.Dashboard;
-import com.sayem.signup.SignupPage;
+import com.sayem.pages.LandingPage;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,8 +22,8 @@ public class SignupTest extends TestBase{
         char c = (char)(rand.nextInt(26) + 'a');
         String emailAddress = "signup"+c+random+c+"@ilearnvest.com";
 
-        Dashboard dashboard = PageFactory.initElements(driver, Dashboard.class);
-        SignupPage signupPage = dashboard.signUpAndLogin();
-        signupPage.signUp(emailAddress, "user1234", "Syed", "30");
+        LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
+        dashboard.takeMeToSignupPage().signMeUp(emailAddress, "user1234")
+                .enterPasscode().aBitAboutYourself();
     }
 }
