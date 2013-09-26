@@ -1,5 +1,6 @@
-package com.sayem.pages.random;
+package com.sayem.signup;
 
+import com.sayem.pages.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -15,7 +16,7 @@ public class SignupPage {
     @FindBy(xpath = "//window[1]/scrollview[1]/button[2]")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[2]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[1]")
     private WebElement emailAddress;
 
     @FindBy(xpath = "//window[1]/scrollview[1]/textfield[3]")
@@ -24,7 +25,7 @@ public class SignupPage {
     @FindBy(xpath = "//window[1]/scrollview[1]/textfield[4]")
     private WebElement password;
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[5]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/secure[3]")
     private WebElement confirmPassword;
 
     @FindBy(xpath = "//window[1]/scrollview[1]/button[5]")
@@ -77,17 +78,12 @@ public class SignupPage {
     private WebElement profileNextButton;
 
 
-
-
-
-
     public LoginPage login(){
         loginButton.click();
         return PageFactory.initElements(driver, LoginPage.class);
     }
 
-
-    public HomePage signUp(String emailAddress, String password, String profileFirstName, String profileAge){
+    public Profile1Page signUp(String emailAddress, String password, String profileFirstName, String profileAge){
         signupMethod(emailAddress, password);
         passcodeMethod();
         passcodeMethod();
@@ -100,12 +96,7 @@ public class SignupPage {
         profileDoneButton.click();
         profileNextButton.click();
 
-
-
-
-
-
-        return PageFactory.initElements(driver, HomePage.class);
+        return PageFactory.initElements(driver, Profile1Page.class);
     }
 
     private void signupMethod(String emailAddress, String password) {

@@ -1,7 +1,7 @@
-package com.sayem.pages.random;
+package com.sayem.pages;
 
 import com.sayem.pages.myexpert.MyExpertPage;
-import com.sayem.pages.mygoal.MyGoalPage;
+import com.sayem.pages.mygoals.MyGoalPage;
 import com.sayem.pages.mymoney.MyMoneyPage;
 import com.sayem.pages.myreads.MyReadsPage;
 import com.sayem.pages.settings.SettingsPage;

@@ -1,19 +1,20 @@
-package com.sayem.pages.random;
+package com.sayem.pages;
 
+import com.sayem.signup.SignupPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LandingPage {
+public class Dashboard {
 
     private WebDriver driver;
 
-    public LandingPage(WebDriver driver){
+    public Dashboard(WebDriver driver){
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//window[1]/button[1]")
+    @FindBy(name = "Sign Up / Log In")
     private WebElement signUpLoginButton;
 
     public SignupPage signUpAndLogin(){
