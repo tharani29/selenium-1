@@ -1,6 +1,6 @@
 package com.sayem.pages.login;
 
-import com.sayem.pages.signup.Profile1Page;
+import com.sayem.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -26,10 +26,14 @@ public class PasscodePage {
     @FindBy(xpath = "//window[1]/button[12]")
     private WebElement passcodeFour;
 
-    public Profile1Page enterPasscode(){
-        passcode();
-        passcode();
-        return PageFactory.initElements(driver, Profile1Page.class);
+    public HomePage enterPasscode(){
+        try {
+            passcode();
+            passcode();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return PageFactory.initElements(driver, HomePage.class);
 
     }
 

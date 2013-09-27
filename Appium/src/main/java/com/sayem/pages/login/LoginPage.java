@@ -1,6 +1,5 @@
 package com.sayem.pages.login;
 
-import com.sayem.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,48 +13,25 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[1]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/textfield[2]")
     private WebElement emailAddress;
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/secure[1]")
+    @FindBy(xpath = "//window[1]/scrollview[1]/secure[2]")
     private WebElement password;
 
-    @FindBy(xpath = "//window[1]/scrollview[1]/button[5]")
+    @FindBy(name = "Submit")
     private WebElement submitButton;
 
-    @FindBy(xpath = "//window[2]/toolbar[1]/button[3]")
+    @FindBy(name = "Done")
     private WebElement doneButton;
 
-    @FindBy(xpath = "//window[1]/button[9]")
-    private WebElement passcodeOne;
-
-    @FindBy(xpath = "//window[1]/button[10]")
-    private WebElement passcodeTwo;
-
-    @FindBy(xpath = "//window[1]/button[11]")
-    private WebElement passcodeThree;
-
-    @FindBy(xpath = "//window[1]/button[12]")
-    private WebElement passcodeFour;
-
-    public HomePage loginIn(String emailAddress, String password) throws InterruptedException {
+    public PasscodePage loginIn(String emailAddress, String password) throws InterruptedException {
         Thread.sleep(3000L);
         this.emailAddress.sendKeys(emailAddress);
         this.doneButton.click();
         this.password.sendKeys(password);
         this.doneButton.click();
         this.submitButton.click();
-        return PageFactory.initElements(driver, HomePage.class);
-    }
-
-    private void passcodeMethod() {
-        try {
-            passcodeOne.click();
-            passcodeTwo.click();
-            passcodeThree.click();
-            passcodeFour.click();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+        return PageFactory.initElements(driver, PasscodePage.class);
     }
 }

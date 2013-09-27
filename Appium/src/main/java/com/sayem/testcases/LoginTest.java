@@ -21,6 +21,7 @@ public class LoginTest extends TestBase{
         String password = "user1234";
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
-        dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password);
+        dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
+                .enterPasscode();
     }
 }
