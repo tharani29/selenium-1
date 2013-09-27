@@ -18,6 +18,9 @@
 
 Open the terminal and fire these command below
 ==============================================
+ssayem ~: appium -U 849e6d3523c1b93ee742e1a2fe242abca97ea3b3 --app /Users/ssayem/Dropbox/Appium/LearnVest/LearnVest.app -a 127.0.0.1
+
+Start the server with node.js
+===================
 ssayem ~: cd Appium/appium-test/
-ssayem ~: appium -U 849e6d3523c1b93ee742e1a2fe242abca97ea3b3 --app /Users/ssaye
-m/Dropbox/Appium/LearnVest/LearnVest.app -a 127.0.0.1
+ssayem ~: node server.js -U 849e6d3523c1b93ee742e1a2fe242abca97ea3b3 --app /Users/ssayem/Dropbox/Appium/LearnVest/LearnVest.app -a 127.0.0.1

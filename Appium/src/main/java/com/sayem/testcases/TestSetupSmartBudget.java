@@ -5,7 +5,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LoginTest extends TestBase{
+public class TestSetupSmartBudget extends TestBase{
 
 
     @BeforeMethod
@@ -22,6 +22,6 @@ public class LoginTest extends TestBase{
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
-                .enterPasscode();
+                .enterPasscode().goToMyMoneyPage();
     }
 }

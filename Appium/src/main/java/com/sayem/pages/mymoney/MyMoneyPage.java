@@ -35,7 +35,7 @@ public class MyMoneyPage {
     }
 
 
-    public void budgetSetup(){
+    public void setUpYourBudget(){
         getStartedButton.click();
         searchForAnAccount.sendKeys("dag");
     }
