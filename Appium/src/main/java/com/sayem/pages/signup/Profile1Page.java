@@ -1,6 +1,5 @@
-package com.sayem.signup;
+package com.sayem.pages.signup;
 
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -45,7 +44,6 @@ public class Profile1Page {
         age.sendKeys("30");
         doneButton.click();
         maleButton.click();
-        selectTab.sendKeys(Keys.ARROW_DOWN);
         return PageFactory.initElements(driver, Profile2Page.class);
 
     }
