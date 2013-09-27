@@ -25,5 +25,9 @@ public class SignupTest extends TestBase{
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().signMeUp(emailAddress, "user1234")
                 .enterPasscode().aBitAboutYourself();
+
+        // UIAPickerWheel issue on Profile1Page.java
+        // https://groups.google.com/forum/#!searchin/appium-discuss/UIAPickerWheel/appium-discuss/uYdRTdQDvpU/NPhNX1rLI9wJ
+        // https://github.com/appium/appium/wiki/Automating-mobile-gestures
     }
 }
