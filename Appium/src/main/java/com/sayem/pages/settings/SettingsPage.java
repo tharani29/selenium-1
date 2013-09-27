@@ -1,6 +1,5 @@
 package com.sayem.pages.settings;
 
-import com.sayem.pages.mygoal.MyGoalPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

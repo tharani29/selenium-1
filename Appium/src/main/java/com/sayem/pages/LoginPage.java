@@ -1,4 +1,4 @@
-package com.sayem.pages.random;
+package com.sayem.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
