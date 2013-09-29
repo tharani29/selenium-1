@@ -5,26 +5,23 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class LogoutTest extends TestBase{
+public class TestSetupSmartBudget extends TestBase{
+
 
     @BeforeMethod
     public void setUp() throws Exception {
         initDriver();
     }
 
+
     @Test
     protected void testUIComputation() throws Exception {
-        String emailAddress = "sayem@ilearnvest.com";
-        String password = "user1234";
+
+        String emailAddress = "sayem@learnvest.com";
+        String password = "sami3092";
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
-        dashboard.takeMeToSignupPage().login().loginIn(emailAddress,password)
-                .goToSettingsPage().logout();
-
-
-
-
-
-
+        dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
+                .enterPasscode().goToMyMoneyPage();
     }
 }

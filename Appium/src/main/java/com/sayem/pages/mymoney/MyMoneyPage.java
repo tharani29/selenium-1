@@ -1,6 +1,6 @@
 package com.sayem.pages.mymoney;
 
-import com.sayem.signup.SignupPage;
+import com.sayem.pages.signup.SignupPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -35,7 +35,7 @@ public class MyMoneyPage {
     }
 
 
-    public void budgetSetup(){
+    public void setUpYourBudget(){
         getStartedButton.click();
         searchForAnAccount.sendKeys("dag");
     }

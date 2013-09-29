@@ -17,10 +17,11 @@ public class LoginTest extends TestBase{
     @Test
     protected void testUIComputation() throws Exception {
 
-        String emailAddress = "sayem@ilearnvest.com";
-        String password = "user1234";
+        String emailAddress = "sayem@learnvest.com";
+        String password = "sami3092";
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
-        dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password);
+        dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
+                .enterPasscode();
     }
 }

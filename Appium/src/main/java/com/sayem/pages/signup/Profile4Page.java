@@ -1,4 +1,4 @@
-package com.sayem.signup;
+package com.sayem.pages.signup;
 
 import com.sayem.pages.HomePage;
 import org.openqa.selenium.WebDriver;

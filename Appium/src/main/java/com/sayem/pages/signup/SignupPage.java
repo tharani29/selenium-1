@@ -1,6 +1,6 @@
-package com.sayem.signup;
+package com.sayem.pages.signup;
 
-import com.sayem.pages.LoginPage;
+import com.sayem.pages.login.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
