@@ -36,26 +36,44 @@ public class LoginPage extends BasePage {
     @FindBy(css = ".forgotPassword")
     private WebElement iForgotButton;
 
-    public DashboardPage logMeIn(String email, String password){
-        this.emailAddress.clear();
-        this.emailAddress.sendKeys(email);
-        this.password.clear();
-        this.password.sendKeys(password);
-        this.logInButton.click();
-        return PageFactory.initElements(driver, DashboardPage.class);
-    }
+//    public DashboardPage logMeIn(String email, String password){
+//        this.emailAddress.clear();
+//        this.emailAddress.sendKeys(email);
+//        this.password.clear();
+//        this.password.sendKeys(password);
+//        this.logInButton.click();
+//        return PageFactory.initElements(driver, DashboardPage.class);
+//    }
 
     public ResetPasswordPage takeMeToResetPasswordPage(){
         iForgotButton.click();
         return PageFactory.initElements(driver, ResetPasswordPage.class);
     }
 
-    public AdminPanel logMeInToAdminPanel(String email, String password){
+//    public AdminPanel logMeInToAdminPanel(String email, String password){
+//        this.emailAddress.clear();
+//        this.emailAddress.sendKeys(email);
+//        this.password.clear();
+//        this.password.sendKeys(password);
+//        this.logInButton.click();
+//        return PageFactory.initElements(driver, AdminPanel.class);
+//    }
+
+    private <T> T loginMeIn(String email, String password, Class<T> expectedPage){
         this.emailAddress.clear();
         this.emailAddress.sendKeys(email);
         this.password.clear();
         this.password.sendKeys(password);
         this.logInButton.click();
-        return PageFactory.initElements(driver, AdminPanel.class);
+        return PageFactory.initElements(driver, expectedPage);
     }
+
+    public DashboardPage loginToDashboard(String email, String password){
+        return loginMeIn(email, password, DashboardPage.class);
+    }
+
+    public AdminPanel loginToAdminPanel(String email, String password){
+        return loginMeIn(email, password, AdminPanel.class);
+    }
+
 }
