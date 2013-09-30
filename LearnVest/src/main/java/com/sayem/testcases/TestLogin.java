@@ -15,6 +15,5 @@ public class TestLogin extends TestBase {
 
     // Go to configurations => config.properties to change URL, Email, Password etc.
         homePage.takeMeToLoginPage().loginToAdminPanel(loginEmail, loginPassword);
-
     }
 }
