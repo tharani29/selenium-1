@@ -1,13 +1,16 @@
 package com.sayem.pages.signup;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.HashMap;
+
 public class Profile1Page {
 
-    private WebDriver driver;
+    public WebDriver driver;
 
     public Profile1Page(WebDriver driver){
         this.driver = driver;
@@ -38,13 +41,42 @@ public class Profile1Page {
     @FindBy(name = "Done")
     private WebElement doneButton;
 
+
+
     public Profile2Page aBitAboutYourself(){
+
         firstName.sendKeys("Syed");
         doneButton.click();
         age.sendKeys("30");
         doneButton.click();
         maleButton.click();
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        final HashMap<String, Double> flickObject = new HashMap<String, Double>();
+
+        // first
+        flickObject.put("touchCount", (double) 1);
+        flickObject.put("startX", (double) 156);
+        flickObject.put("startY", (double) 360);
+        flickObject.put("endX", (double) 156);
+        flickObject.put("endY", (double) 360);
+        flickObject.put("duration", 0.5);
+        js.executeScript("mobile: swipe", flickObject);
+
+
+        // second
+        flickObject.put("startX", (double) 100);
+        flickObject.put("startY", (double)419);
+        flickObject.put("endX", (double)100);
+        flickObject.put("endY", (double)419);
+        flickObject.put("duration", (double)0.5);
+        js.executeScript("mobile: swipe", flickObject);
+
+        doneButton.click();
+        nextButton.click();
+
         return PageFactory.initElements(driver, Profile2Page.class);
+
 
     }
 }

@@ -12,7 +12,7 @@ public class SearchForUser extends TestBase{
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 
         // Go to configurations => config.properties to change URL, Email, Password etc.
-        homePage.takeMeToLoginPage().logMeInToAdminPanel(loginEmail, loginPassword)
+        homePage.takeMeToLoginPage().loginToAdminPanel(loginEmail, loginPassword)
                 .takeMeToUserLookUpDashboard();
     }
 
