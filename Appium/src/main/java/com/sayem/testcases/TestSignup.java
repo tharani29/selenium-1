@@ -28,7 +28,8 @@ public class TestSignup extends TestBase{
                 .enterPasscode()
                 .aBitAboutYourself()
                 .selectBudget()
-                .profile3income();
+                .profile3income()
+                .finishedShowMeMyApp();
     }
 
     @AfterMethod

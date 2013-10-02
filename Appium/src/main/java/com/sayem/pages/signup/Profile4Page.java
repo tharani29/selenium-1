@@ -14,11 +14,12 @@ public class Profile4Page {
         this.driver = driver;
     }
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Finished! Show Me My App")
     private WebElement showMeMyApp;
 
 
-    public HomePage signUpAndLogin(){
+    public HomePage finishedShowMeMyApp(){
+        showMeMyApp.click();
         return PageFactory.initElements(driver, HomePage.class);
 
     }
