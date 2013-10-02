@@ -13,7 +13,7 @@ import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
+public class BaseTest {
 
 	public static Logger APPLICATION_LOGS = null;
 	public static Properties CONFIG=null;

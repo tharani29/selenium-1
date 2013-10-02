@@ -14,13 +14,13 @@
 
     <test name="Signup Test">
         <classes>
-            <class name="com.sayem.testcases.TestSignup" />
+            <class name="com.sayem.testcases.SignupTest" />
         </classes>
     </test>
 
     <test name="Logout Test">
         <classes>
-            <class name="com.sayem.testcases.TestLogout" />
+            <class name="com.sayem.testcases.LogoutTest" />
         </classes>
     </test>
 

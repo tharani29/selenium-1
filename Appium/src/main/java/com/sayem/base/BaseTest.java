@@ -9,7 +9,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-public class TestBase {
+public class BaseTest {
 
 	public static Logger APPLICATION_LOGS = null;
 	public static Properties CONFIG=null;

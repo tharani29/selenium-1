@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.Random;
 
 
-public class TestSignup extends TestBase{
+public class SignupTest extends BaseTest {
 
     @BeforeMethod
     public void setUp() throws Exception {

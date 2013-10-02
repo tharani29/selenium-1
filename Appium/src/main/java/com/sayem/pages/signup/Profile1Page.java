@@ -45,37 +45,33 @@ public class Profile1Page {
 
     public Profile2Page aBitAboutYourself(){
 
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        final HashMap<String, Double> flickObject = new HashMap<String, Double>();
+
         firstName.sendKeys("Syed");
         doneButton.click();
         age.sendKeys("30");
         doneButton.click();
         maleButton.click();
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        final HashMap<String, Double> flickObject = new HashMap<String, Double>();
-
-        // first swipe
-        flickObject.put("touchCount", (double) 1);
-        flickObject.put("startX", (double) 156);
-        flickObject.put("startY", (double) 360);
-        flickObject.put("endX", (double) 156);
-        flickObject.put("endY", (double) 360);
-        flickObject.put("duration", 0.5);
-        js.executeScript("mobile: swipe", flickObject);
-
-
-        // second swipe
-        //flickObject.put("touchCount", (double) 1);
-        flickObject.put("startX", (double) 100);
-        flickObject.put("startY", (double)419);
-        flickObject.put("endX", (double)100);
-        flickObject.put("endY", (double)419);
-        flickObject.put("duration", (double)0.5);
-        js.executeScript("mobile: swipe", flickObject);
+        swipe(js, flickObject, 1, 156, 360, 156, 360, 0.5);
+        swipe(js, flickObject, 1, 100, 419, 100, 419, 0.5);
 
         doneButton.click();
         nextButton.click();
 
         return PageFactory.initElements(driver, Profile2Page.class);
+    }
+
+    private void swipe(JavascriptExecutor js, HashMap<String, Double> flickObject,
+                       double touchCount, double startX, double startY,
+                       double endX, double endY, double duration) {
+        flickObject.put("touchCount", (double) touchCount);
+        flickObject.put("startX", (double) startX);
+        flickObject.put("startY", (double) startY);
+        flickObject.put("endX", (double) endX);
+        flickObject.put("endY", (double) endY);
+        flickObject.put("duration", duration);
+        js.executeScript("mobile: swipe", flickObject);
     }
 }
