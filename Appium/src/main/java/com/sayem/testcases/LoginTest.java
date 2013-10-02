@@ -2,6 +2,7 @@ package com.sayem.testcases;
 
 import com.sayem.pages.LandingPage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,5 +24,10 @@ public class LoginTest extends TestBase{
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
                 .enterPasscode();
+    }
+
+    @AfterMethod
+    public void tearDown(){
+        //quitDriver();
     }
 }

@@ -35,7 +35,7 @@ public class Profile1Page {
     @FindBy(xpath = "Sign Up / Log In")
     private WebElement withMySpouseLink;
 
-    @FindBy(xpath = "Sign Up / Log In")
+    @FindBy(name = "Next")
     private WebElement nextButton;
 
     @FindBy(name = "Done")
@@ -54,7 +54,7 @@ public class Profile1Page {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         final HashMap<String, Double> flickObject = new HashMap<String, Double>();
 
-        // first
+        // first swipe
         flickObject.put("touchCount", (double) 1);
         flickObject.put("startX", (double) 156);
         flickObject.put("startY", (double) 360);
@@ -64,7 +64,8 @@ public class Profile1Page {
         js.executeScript("mobile: swipe", flickObject);
 
 
-        // second
+        // second swipe
+        //flickObject.put("touchCount", (double) 1);
         flickObject.put("startX", (double) 100);
         flickObject.put("startY", (double)419);
         flickObject.put("endX", (double)100);
@@ -76,7 +77,5 @@ public class Profile1Page {
         nextButton.click();
 
         return PageFactory.initElements(driver, Profile2Page.class);
-
-
     }
 }

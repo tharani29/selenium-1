@@ -2,6 +2,7 @@ package com.sayem.testcases;
 
 import com.sayem.pages.LandingPage;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -25,9 +26,10 @@ public class TestSignup extends TestBase{
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().signMeUp(emailAddress, "user1234")
                 .enterPasscode().aBitAboutYourself();
+    }
 
-        // UIAPickerWheel issue on Profile1Page.java
-        // https://groups.google.com/forum/#!searchin/appium-discuss/UIAPickerWheel/appium-discuss/uYdRTdQDvpU/NPhNX1rLI9wJ
-        // https://github.com/appium/appium/wiki/Automating-mobile-gestures
+    @AfterMethod
+    public void tearDown(){
+        //quitDriver();
     }
 }
