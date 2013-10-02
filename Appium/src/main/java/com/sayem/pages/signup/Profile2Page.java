@@ -13,35 +13,40 @@ public class Profile2Page {
         this.driver = driver;
     }
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Budget Better")
     private WebElement budgetBetter;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Save More")
     private WebElement saveMore;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Retire Well")
     private WebElement retireWell;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Pay Off Cards")
     private WebElement payOffCards;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Buy a House")
     private WebElement buyAHouse;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Deal with Loans")
     private WebElement dealWithLoans;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Invest Wisely")
     private WebElement investWisely;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Earn More")
     private WebElement earnMore;
 
-    @FindBy(name = "Sign Up / Log In")
+    @FindBy(name = "Next")
     private WebElement nextButton;
 
 
-    public Profile3Page signUpAndLogin(){
+    public Profile3Page selectBudget(){
+        retireWell.click();
+        payOffCards.click();
+        budgetBetter.click();
+        nextButton.click();
+
         return PageFactory.initElements(driver, Profile3Page.class);
 
     }

@@ -25,7 +25,10 @@ public class TestSignup extends TestBase{
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().signMeUp(emailAddress, "user1234")
-                .enterPasscode().aBitAboutYourself();
+                .enterPasscode()
+                .aBitAboutYourself()
+                .selectBudget()
+                .profile3income();
     }
 
     @AfterMethod
