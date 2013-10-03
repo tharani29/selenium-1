@@ -24,19 +24,41 @@ public class MyMoneyPage {
     private WebElement searchForAnAccount;
 
     @FindBy(xpath = "//window[1]/tableview[1]/cell[1]/text[1]")
-    private WebElement dagBank;
+    private WebElement bankName;
+
+    @FindBy(xpath = "")
+    private WebElement userID;
+
+    @FindBy(xpath = "")
+    private WebElement password;
+
+    @FindBy(xpath = "")
+    private WebElement submitButton;
+
+    @FindBy(xpath = "")
+    private WebElement cancelButton;
+
+    @FindBy(xpath = "")
+    private WebElement doneButton;
+
+    @FindBy(xpath = "")
+    private WebElement nextButton;
+
+    @FindBy(xpath = "")
+    private WebElement prevButton;
 
 
 
     public SignupPage signUpAndLogin(){
         signUpLoginButton.click();
         return PageFactory.initElements(driver, SignupPage.class);
-
     }
-
 
     public void setUpYourBudget(){
         getStartedButton.click();
-        searchForAnAccount.sendKeys("dag");
+        searchForAnAccount.sendKeys("CAPITAL ONE - BANK");
+        bankName.click();
+
+
     }
 }

@@ -23,7 +23,7 @@ public class SetupSmartBudgetTest extends BaseTest {
 
         LandingPage dashboard = PageFactory.initElements(driver, LandingPage.class);
         dashboard.takeMeToSignupPage().login().loginIn(emailAddress, password)
-                .enterPasscode().goToMyMoneyPage();
+                .enterPasscode().goToMyMoneyPage().setUpYourBudget();
     }
 
     @AfterMethod
