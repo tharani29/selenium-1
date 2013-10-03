@@ -11,6 +11,7 @@ import java.util.HashMap;
 public class Profile1Page {
 
     public WebDriver driver;
+    private JavascriptExecutor js;
 
     public Profile1Page(WebDriver driver){
         this.driver = driver;
@@ -45,7 +46,7 @@ public class Profile1Page {
 
     public Profile2Page aBitAboutYourself(){
 
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js = (JavascriptExecutor) driver;
         final HashMap<String, Double> flickObject = new HashMap<String, Double>();
 
         firstName.sendKeys("Syed");
