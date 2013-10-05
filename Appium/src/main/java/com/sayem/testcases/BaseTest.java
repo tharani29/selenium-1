@@ -1,6 +1,8 @@
 package com.sayem.testcases;
 
 import org.apache.log4j.Logger;
+import org.json.simple.JSONArray;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -49,6 +51,8 @@ public class BaseTest {
 	}
 	
 	public void quitDriver(){
+        //JSONArray json = new JSONArray();
+        //((JavascriptExecutor)driver).executeScript("mobile: reset");
 		driver.quit();
 		driver=null;
 	}
