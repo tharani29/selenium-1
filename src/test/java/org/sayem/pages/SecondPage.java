@@ -1,5 +1,7 @@
 package org.sayem.pages;
 
+import java.util.function.BiConsumer;
+
 /**
  * Created by sayem on 12/4/15.
  */
@@ -12,8 +14,9 @@ public class SecondPage<T extends BasePage<?>> extends BasePage<T> {
         this.thirdPage = new ThirdPage<>(this);
     }
 
-    public ThirdPage<SecondPage<T>> second(){
+    public ThirdPage<SecondPage<T>> second(BiConsumer<String, String> consumer){
         System.out.println("second.....");
+        consumer.accept("", "");
         return this.thirdPage;
     }
 }

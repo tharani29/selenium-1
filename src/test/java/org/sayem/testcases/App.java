@@ -1,6 +1,7 @@
 package org.sayem.testcases;
 
 import org.junit.Test;
+import org.sayem.assertion.Assertion;
 import org.sayem.browsers.Browsers;
 import org.sayem.pages.HomePage;
 
@@ -10,9 +11,12 @@ import org.sayem.pages.HomePage;
 public class App {
 
     @Test
-    public void testGoogle(){
+    public void testGoogle() {
         HomePage<?> driver = new HomePage<>(Browsers.CHROME);
-        driver.first().second().third();
+        driver
+                .first(Assertion::assertEquals)
+                .second(Assertion::assertNotEquals)
+                .third(Assertion::assertEquals);
         driver.quit();
     }
 }
