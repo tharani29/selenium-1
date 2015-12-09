@@ -36,13 +36,13 @@ public class Calendar {
      * @param calendarClosed    whether calendar is closed
      */
     Calendar(Page page,
-                    Locator<Page, Void> trigger,
-                    Locator<Page, Integer> displayedYear,
-                    Locator<Page, Integer> displayedMonth,
-                    Locator<Page, Void> previousMonth,
-                    Locator<Page, Void> nextMonth,
-                    DayLocatorFactory dayLocatorFactory,
-                    Predicate<Page> calendarClosed) {
+             Locator<Page, Void> trigger,
+             Locator<Page, Integer> displayedYear,
+             Locator<Page, Integer> displayedMonth,
+             Locator<Page, Void> previousMonth,
+             Locator<Page, Void> nextMonth,
+             DayLocatorFactory dayLocatorFactory,
+             Predicate<Page> calendarClosed) {
         this.page = page;
         this.trigger = trigger;
         this.displayedYear = displayedYear;

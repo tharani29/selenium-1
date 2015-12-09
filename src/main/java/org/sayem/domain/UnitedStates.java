@@ -60,13 +60,13 @@ public enum UnitedStates {
         this.value = value;
     }
 
+    public static UnitedStates fromString(String string) {
+        return valueOf(StringConverter.RESTORE_UNDERSCORE.locate(string));
+    }
+
     @Override
     public String toString() {
         return StringConverter.REPLACE_UNDERSCORE.locate(this.name());
-    }
-
-    public static UnitedStates fromString(String string) {
-        return valueOf(StringConverter.RESTORE_UNDERSCORE.locate(string));
     }
 
 }

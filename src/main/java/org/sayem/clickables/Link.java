@@ -1,9 +1,8 @@
-
 package org.sayem.clickables;
 
 import org.sayem.selenium.Element;
-import org.sayem.selenium.SearchScope;
 import org.sayem.selenium.Locator;
+import org.sayem.selenium.SearchScope;
 
 public class Link<T extends SearchScope<T>> extends Clickables<T> {
 

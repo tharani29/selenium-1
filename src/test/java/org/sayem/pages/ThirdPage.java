@@ -1,18 +1,16 @@
 package org.sayem.pages;
 
-import java.util.function.BiConsumer;
-
 /**
  * Created by sayem on 12/5/15.
  */
-public class ThirdPage<T extends BasePage<?>> extends BasePage<T> {
+public class ThirdPage<T extends Page<?>> extends Page<T> {
 
-    public ThirdPage(Page page) {
-        super(page);
+    public ThirdPage(Page page, T parent) {
+        super(page, parent);
     }
 
-    public void third(BiConsumer<String, String> consumer){
-        System.out.println("third....");
-        consumer.accept("", "");
+    public ThirdPage<T> third() {
+        System.out.println("ThirdPage method....");
+        return this;
     }
 }

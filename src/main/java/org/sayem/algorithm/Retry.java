@@ -4,10 +4,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Retry {
 
-    private boolean on;
-    private long count;
     private final long interval;
     private final TimeUnit unit;
+    private boolean on;
+    private long count;
 
     /**
      * Construct a retry instance.

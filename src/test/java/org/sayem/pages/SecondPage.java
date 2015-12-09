@@ -1,22 +1,19 @@
 package org.sayem.pages;
 
-import java.util.function.BiConsumer;
-
 /**
  * Created by sayem on 12/4/15.
  */
-public class SecondPage<T extends BasePage<?>> extends BasePage<T> {
+public class SecondPage<T extends Page<?>> extends Page<T> {
 
     private final ThirdPage<SecondPage<T>> thirdPage;
 
-    protected SecondPage(Page page) {
-        super(page);
-        this.thirdPage = new ThirdPage<>(this);
+    protected SecondPage(Page page, T parent) {
+        super(page, parent);
+        this.thirdPage = new ThirdPage<>(this, this);
     }
 
-    public ThirdPage<SecondPage<T>> second(BiConsumer<String, String> consumer){
-        System.out.println("second.....");
-        consumer.accept("", "");
+    public ThirdPage<SecondPage<T>> second() {
+        System.out.println("SecondPage method....");
         return this.thirdPage;
     }
 }

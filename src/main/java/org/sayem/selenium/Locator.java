@@ -21,13 +21,12 @@ public interface Locator<T1, T2> extends Function<T1, T2> {
      * If evaluation of either function throws an exception, it is relayed to
      * the caller of the composed function.
      *
-     * @param <V> the type of input to the {@code before} function, and to the
-     *           composed function
+     * @param <V>    the type of input to the {@code before} function, and to the
+     *               composed function
      * @param before the function to apply before this function is applied
      * @return a composed function that first applies the {@code before}
      * function and then applies this function
      * @throws NullPointerException if before is null
-     *
      * @see #andThen(Function)
      */
     default <V> Locator<V, T2> compose(Function<? super V, ? extends T1> before) {

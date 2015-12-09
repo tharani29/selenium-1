@@ -12,12 +12,12 @@ public enum StringToMonth implements Locator<String, Month> {
 
     TO_MONTH;
 
+    private static final SelfPopulatingCache<String, Month> maps = new SelfPopulatingCache<>(48, new OneKeyLFUPolicy<>(), MONTH_MAPPER);
+
     @Override
     public Month locate(String element) {
         return maps.valueOf(element.toUpperCase());
     }
-
-    private static final SelfPopulatingCache<String, Month> maps = new SelfPopulatingCache<>(48, new OneKeyLFUPolicy<>(), MONTH_MAPPER);
 
     enum MonthMapper implements SelfPopulatingCache.Creator<String, Month> {
         MONTH_MAPPER;

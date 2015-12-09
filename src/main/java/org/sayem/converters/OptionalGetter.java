@@ -5,7 +5,7 @@ import org.sayem.selenium.Locator;
 
 import java.util.Optional;
 
-public enum OptionalGetter implements Locator<Optional<Element>, Element>{
+public enum OptionalGetter implements Locator<Optional<Element>, Element> {
     GET;
 
     @Override

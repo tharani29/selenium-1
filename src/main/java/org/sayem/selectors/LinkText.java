@@ -32,6 +32,10 @@ public enum LinkText implements Supplier<By> {
         this.text = text;
     }
 
+    public static LinkText resolve(String text) {
+        return Stream.of(values()).filter((LinkText t) -> t.text.equals(text)).findFirst().get();
+    }
+
     /**
      * @return the by instance variable which is a ByLinkText.
      */
@@ -43,9 +47,5 @@ public enum LinkText implements Supplier<By> {
     @Override
     public String toString() {
         return by.toString();
-    }
-
-    public static LinkText resolve(String text) {
-        return Stream.of(values()).filter( (LinkText t) -> t.text.equals(text)).findFirst().get();
     }
 }

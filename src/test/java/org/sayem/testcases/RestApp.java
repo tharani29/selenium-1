@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 public class RestApp {
 
     @Test
-    public void restTest(){
+    public void restTest() {
         RestAdapter delete = RestFactory.DELETE.adapter;
         delete.execute();
     }

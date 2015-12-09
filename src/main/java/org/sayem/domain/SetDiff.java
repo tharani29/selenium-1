@@ -7,9 +7,9 @@ import static com.google.common.collect.Sets.newHashSet;
 
 public class SetDiff<T> {
 
-    private String diff;
     private final Set<T> expected;
     private final Set<T> actual;
+    private String diff;
 
     public SetDiff(String info, Set<T> expected, Set<T> actual) {
         this.diff = info;

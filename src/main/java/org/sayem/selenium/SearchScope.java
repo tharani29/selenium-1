@@ -1,29 +1,25 @@
 package org.sayem.selenium;
 
-import org.sayem.clickables.Button;
-import org.sayem.clickables.Link;
-import org.sayem.conditions.StringContains;
-import org.sayem.converters.ElementAtIndex;
-import org.sayem.converters.Filter;
-import org.sayem.converters.FirstItem;
-import org.sayem.converters.StreamToList;
-import org.sayem.locators.Locators;
-import org.sayem.converters.GetText;
-import org.sayem.selectors.TagName;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
+import org.sayem.clickables.Button;
+import org.sayem.clickables.Link;
+import org.sayem.conditions.StringContains;
+import org.sayem.converters.*;
+import org.sayem.locators.Locators;
+import org.sayem.selectors.TagName;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
 import static org.sayem.conditions.ElementPredicates.DISPLAYED;
 import static org.sayem.conditions.ElementPredicates.NOT_NULL;
 import static org.sayem.locators.Locators.element;
-import static java.util.stream.Collectors.toList;
 
 
 public interface SearchScope<T extends SearchScope<T>>

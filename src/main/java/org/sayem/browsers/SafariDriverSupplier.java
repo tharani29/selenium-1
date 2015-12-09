@@ -1,7 +1,7 @@
 package org.sayem.browsers;
 
-import org.sayem.selenium.CachedWebDriverSupplier;
 import org.openqa.selenium.safari.SafariDriver;
+import org.sayem.selenium.CachedWebDriverSupplier;
 
 public class SafariDriverSupplier implements CachedWebDriverSupplier<SafariDriver> {
     @Override

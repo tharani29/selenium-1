@@ -1,8 +1,8 @@
 package org.sayem.browsers;
 
-import org.sayem.selenium.CachedWebDriverSupplier;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.sayem.selenium.CachedWebDriverSupplier;
 
 public class ChromeDriverSupplier implements CachedWebDriverSupplier<ChromeDriver> {
 

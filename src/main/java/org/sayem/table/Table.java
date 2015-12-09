@@ -1,12 +1,12 @@
 package org.sayem.table;
 
 
+import org.sayem.converters.GetText;
 import org.sayem.locators.Locators;
+import org.sayem.selectors.TagName;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
-import org.sayem.converters.GetText;
-import org.sayem.selectors.TagName;
 
 import java.util.stream.Collectors;
 import java.util.stream.Stream;

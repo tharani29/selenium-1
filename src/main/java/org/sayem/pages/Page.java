@@ -1,16 +1,13 @@
 package org.sayem.pages;
 
-import org.sayem.forms.FormControl;
-import org.sayem.locators.Locators;
-import org.sayem.converters.GetText;
-import org.sayem.converters.OptionalGetter;
-import org.sayem.selectors.ClassName;
-import org.sayem.selenium.Browser;
-import org.sayem.selenium.Clickable;
-import org.sayem.selenium.Element;
-import org.sayem.selenium.Locator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.sayem.converters.GetText;
+import org.sayem.converters.OptionalGetter;
+import org.sayem.forms.FormControl;
+import org.sayem.locators.Locators;
+import org.sayem.selectors.ClassName;
+import org.sayem.selenium.*;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -18,35 +15,41 @@ import java.util.function.Supplier;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public class Page implements FormControl<Page> {
+public class Page<T extends Page<?>> implements FormControl<Page<?>>, SearchScope<Page<?>> {
 
     public static final Logger logger = getLogger(Page.class);
-
     private final Browser<?> browser;
+    protected final Clickable clickable;
+    protected Page<?> page;
+    private final T parent;
 
-    private final Clickable clickable;
-
-    public Page(Page page) {
-        this(page.browser, null);
+    public Page(Page page, T parent) {
+        this(page.browser, null, parent);
     }
 
-    public Page(Page page, Clickable clickable) {
-        this(page.browser, clickable);
+    public Page(Browser<?> browser, Clickable clickable, T parent) {
+        this.browser = browser;
+        this.clickable = clickable;
+        this.parent = parent;
     }
 
     public Page(Browser<?> browser) {
-        this(browser, null);
-    }
-
-    public Page(Browser<?> browser, Clickable clickable) {
         this.browser = browser;
-        this.clickable = clickable;
+        this.parent = null;
+        this.clickable = null;
     }
 
     public final void open() {
         if (clickable != null) {
             clickable.click();
         }
+    }
+
+    public T then() throws NullPointerException {
+        if (parent != null) {
+            return parent;
+        }
+        throw new NullPointerException();
     }
 
     @Override
@@ -108,7 +111,7 @@ public class Page implements FormControl<Page> {
 
     public String getTitle() {
         try {
-            return Locators.<Page>optionalElement(ClassName.PAGE_TITLE).andThen(OptionalGetter.GET).andThen(GetText.TEXT).locate(this);
+            return Locators.<Page<?>>optionalElement(ClassName.PAGE_TITLE).andThen(OptionalGetter.GET).andThen(GetText.TEXT).locate(this);
         } catch (Exception e) {
             return "";
         }

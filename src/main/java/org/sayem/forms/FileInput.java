@@ -1,13 +1,13 @@
 package org.sayem.forms;
 
 
+import org.openqa.selenium.By;
 import org.sayem.algorithm.Retry;
+import org.sayem.converters.OptionalGetter;
 import org.sayem.locators.Locators;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.SearchScope;
-import org.sayem.converters.OptionalGetter;
-import org.openqa.selenium.By;
 import org.slf4j.Logger;
 
 import java.io.File;

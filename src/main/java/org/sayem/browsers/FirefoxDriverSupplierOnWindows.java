@@ -1,10 +1,10 @@
 package org.sayem.browsers;
 
-import org.sayem.selenium.Browser;
-import org.sayem.selenium.CachedWebDriverSupplier;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.sayem.selenium.Browser;
+import org.sayem.selenium.CachedWebDriverSupplier;
 
 import java.io.File;
 

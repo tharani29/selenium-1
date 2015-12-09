@@ -1,7 +1,7 @@
 package org.sayem.selenium;
 
-import org.sayem.objectcache.SelfPopulatingCache;
 import org.openqa.selenium.WebDriver;
+import org.sayem.objectcache.SelfPopulatingCache;
 import org.slf4j.Logger;
 
 import java.util.function.Supplier;

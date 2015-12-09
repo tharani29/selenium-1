@@ -1,7 +1,7 @@
 package org.sayem.browsers;
 
-import org.sayem.selenium.CachedWebDriverSupplier;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.sayem.selenium.CachedWebDriverSupplier;
 
 
 public class InternetExplorerDriverSupplier implements CachedWebDriverSupplier<InternetExplorerDriver> {

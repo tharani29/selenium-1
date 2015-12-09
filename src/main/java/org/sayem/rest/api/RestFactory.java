@@ -15,6 +15,7 @@ public enum RestFactory {
     DELETE(DeleteAdapter::new);
 
     public final RestAdapter adapter;
+
     private RestFactory(Supplier<RestAdapter> adapter) {
         this.adapter = requireNonNull(adapter).get();
     }

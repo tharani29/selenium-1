@@ -13,10 +13,6 @@ public class SelfPopulatingCache<K, V> {
     private final Map<K, V> cache = newHashMap();
     private final Creator<K, V> creator;
 
-    public static <K, V> SelfPopulatingCache<K, V> create(Creator<K, V> creator) {
-        return new SelfPopulatingCache<>(creator);
-    }
-
     public SelfPopulatingCache(Creator<K, V> creator) {
         this(10, new OneKeyLFUPolicy<>(), creator);
     }
@@ -25,6 +21,10 @@ public class SelfPopulatingCache<K, V> {
         this.maxSize = maxSize;
         this.cachePolicy = cachePolicy;
         this.creator = creator;
+    }
+
+    public static <K, V> SelfPopulatingCache<K, V> create(Creator<K, V> creator) {
+        return new SelfPopulatingCache<>(creator);
     }
 
     public V valueOf(K key) {
