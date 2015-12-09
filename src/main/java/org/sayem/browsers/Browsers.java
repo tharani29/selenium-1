@@ -7,12 +7,14 @@ import org.sayem.selenium.CachedWebDriverSupplier;
 
 public enum Browsers implements Browser {
 
-    FIREFOX(new FirefoxDriverSupplier()),
-    CHROME(new ChromeDriverSupplier()),
-    HEADLESS_MAC(new HeadlessFirefoxDriverSupplierOnMacOs()),
-    HEADLESS_LINUX(new HeadlessFirefoxDriverSupplierOnLinux()),
-    SAFARI(new SafariDriverSupplier()),
-    INTERNET_EXPLORER(new InternetExplorerDriverSupplier());
+    FIREFOX(new FirefoxBrowser()),
+    CHROME(new ChromeBrowser()),
+    HEADLESS_MAC(new HeadlessFirefoxBrowserMac()),
+    HEADLESS_LINUX(new HeadlessFirefoxBrowserLinux()),
+    SAFARI(new SafariBrowser()),
+    INTERNET_EXPLORER(new InternetExplorerBrowser()),
+    ANDROID(new AndroidBrowser()),
+    IOS(new IOSBrowser());
 
     private final CachedWebDriverSupplier<? extends WebDriver> webDriverSupplier;
 

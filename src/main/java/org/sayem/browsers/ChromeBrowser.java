@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.sayem.selenium.CachedWebDriverSupplier;
 
-public class ChromeDriverSupplier implements CachedWebDriverSupplier<ChromeDriver> {
+public class ChromeBrowser implements CachedWebDriverSupplier<ChromeDriver> {
 
     @Override
     public ChromeDriver init() {

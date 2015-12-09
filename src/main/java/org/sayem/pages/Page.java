@@ -45,7 +45,7 @@ public class Page<T extends Page<?>> implements FormControl<Page<?>>, SearchScop
         }
     }
 
-    public T then() throws NullPointerException {
+    public T parent() throws NullPointerException {
         if (parent != null) {
             return parent;
         }

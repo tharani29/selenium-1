@@ -15,8 +15,7 @@ public class App {
         driver
                 .first()
                 .second()
-                .third().then().then()
-                .first();
-        driver.quit();
+                .third().parent().parent()
+                .first().close();
     }
 }

@@ -3,7 +3,7 @@ package org.sayem.browsers;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.sayem.selenium.CachedWebDriverSupplier;
 
-public class FirefoxDriverSupplier implements CachedWebDriverSupplier<FirefoxDriver> {
+public class FirefoxBrowser implements CachedWebDriverSupplier<FirefoxDriver> {
     @Override
     public FirefoxDriver init() {
         return new FirefoxDriver();

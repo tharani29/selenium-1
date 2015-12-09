@@ -8,7 +8,7 @@ import org.sayem.selenium.CachedWebDriverSupplier;
 import java.io.File;
 
 
-public class HeadlessFirefoxDriverSupplierOnMacOs implements CachedWebDriverSupplier<FirefoxDriver> {
+public class HeadlessFirefoxBrowserLinux implements CachedWebDriverSupplier<FirefoxDriver> {
     @Override
     public FirefoxDriver init() {
         FirefoxBinary binary = new FirefoxBinary(new File("/opt/local/lib/firefox-x11/firefox-bin"));

@@ -15,6 +15,10 @@ public class HomePage<T extends Page<?>> extends Page<T> {
     }
 
     public SecondPage<HomePage<T>> first() {
+//        button(Id.DATE_PICKER).click();
+//        sendBy(Id.DATE_PICKER, "");
+//        link(Id.DATE_PICKER).click();
+
         System.out.println("FirstPage method....");
         return this.secondPage;
     }
