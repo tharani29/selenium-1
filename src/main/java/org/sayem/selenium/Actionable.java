@@ -19,7 +19,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 /**
  * Created by sayem on 12/4/15.
  */
-public interface Actionable extends WebDriver{
+public interface Actionable extends WebDriver {
 
     Logger logger = getLogger(Actionable.class);
 

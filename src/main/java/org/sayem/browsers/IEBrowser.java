@@ -1,11 +1,11 @@
 package org.sayem.browsers;
 
-import org.sayem.browsers.config.IBrowserThreads;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.sayem.browsers.config.IBrowserThreads;
 
 /**
  * Created by sayem on 12/4/15.

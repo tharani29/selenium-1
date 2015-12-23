@@ -15,7 +15,7 @@ import java.io.IOException;
 /**
  * Created by sayem on 12/4/15.
  */
-public class ScreenshotListener extends TestListenerAdapter{
+public class ScreenshotListener extends TestListenerAdapter {
 
     private boolean createFile(File screenshot) {
         boolean fileCreated = false;

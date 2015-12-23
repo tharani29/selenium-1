@@ -1,5 +1,7 @@
 package org.sayem.forms;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.sayem.algorithm.Retry;
 import org.sayem.conditions.Equals;
 import org.sayem.conditions.StringContains;
@@ -11,8 +13,6 @@ import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.slf4j.Logger;
 
 import java.util.Optional;

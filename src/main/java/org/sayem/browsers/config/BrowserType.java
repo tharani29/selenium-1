@@ -6,7 +6,7 @@ import org.sayem.browsers.*;
  * Created by sayem on 12/4/15.
  */
 public enum BrowserType {
-    FIREFOX (new FirefoxBrowser()),
+    FIREFOX(new FirefoxBrowser()),
     CHROME(new ChromeBrowser()),
     IE(new IEBrowser()),
     SAFARI(new SafariBrowser()),
@@ -14,6 +14,7 @@ public enum BrowserType {
     PHANTOMJS(new PhantomJSBrowser());
 
     public final IBrowserThreads browser;
+
     BrowserType(IBrowserThreads browser) {
         this.browser = browser;
     }

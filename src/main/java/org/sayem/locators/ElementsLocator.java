@@ -1,8 +1,8 @@
 package org.sayem.locators;
 
+import org.openqa.selenium.By;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.SearchScope;
-import org.openqa.selenium.By;
 
 import java.util.function.Supplier;
 import java.util.stream.Stream;

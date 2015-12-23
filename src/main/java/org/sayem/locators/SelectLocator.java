@@ -1,12 +1,12 @@
 package org.sayem.locators;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.support.ui.Select;
 import org.sayem.conditions.HasElements;
 import org.sayem.selectors.TagName;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.SearchScope;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 
 import java.util.function.Supplier;

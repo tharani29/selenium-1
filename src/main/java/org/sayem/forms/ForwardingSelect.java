@@ -1,11 +1,11 @@
 package org.sayem.forms;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Select;
 import org.slf4j.Logger;
 
 import java.util.stream.Stream;

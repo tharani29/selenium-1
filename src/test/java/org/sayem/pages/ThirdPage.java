@@ -1,13 +1,13 @@
 package org.sayem.pages;
 
-import org.sayem.page.Page;
+import org.sayem.Browser;
 
 /**
  * Created by sayem on 12/5/15.
  */
-public class ThirdPage<T extends Page<?>> extends Page<T> {
+public class ThirdPage implements Browser<ThirdPage> {
 
-    public ThirdPage<T> third() {
+    public ThirdPage third() {
         System.out.println("ThirdPage method....");
         return this;
     }

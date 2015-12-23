@@ -1,5 +1,6 @@
 package org.sayem.tests;
 
+import org.sayem.Browser;
 import org.sayem.listeners.ScreenshotListener;
 import org.sayem.pages.HomePage;
 import org.testng.annotations.Listeners;
@@ -13,7 +14,10 @@ public class App {
 
     @Test
     public void googleCheeseExample() {
-        HomePage<?> home = new HomePage<>();
-        home.first().second().third().quit();
+        HomePage page = Browser.pageFactory(HomePage.class);
+        page.first()
+                .second()
+                .third()
+                .quit();
     }
 }

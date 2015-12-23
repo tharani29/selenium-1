@@ -1,10 +1,10 @@
 package org.sayem.forms;
 
+import org.openqa.selenium.By;
 import org.sayem.locators.Locators;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
-import org.openqa.selenium.By;
 
 import java.io.File;
 import java.util.function.Function;

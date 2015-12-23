@@ -1,21 +1,14 @@
 package org.sayem.pages;
 
-import org.sayem.page.Page;
+import org.sayem.Browser;
 
 /**
  * Created by sayem on 12/4/15.
  */
-public class SecondPage<T extends Page<?>> extends Page<T> {
+public class SecondPage implements Browser<SecondPage> {
 
-    private final ThirdPage<SecondPage<T>> thirdPage;
-
-    public SecondPage(T parent) {
-        super(parent);
-        this.thirdPage = new ThirdPage<>();
-    }
-
-    public ThirdPage<SecondPage<T>> second() {
+    public ThirdPage second() {
         System.out.println("SecondPage method....");
-        return this.thirdPage;
+        return Browser.pageFactory(ThirdPage.class);
     }
 }

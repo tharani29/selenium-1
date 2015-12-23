@@ -4,6 +4,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sayem.browsers.config.BrowserThreads;
 import org.sayem.forms.FormControl;
 import org.sayem.selenium.*;
@@ -31,11 +34,31 @@ public interface Browser<T extends WebDriver> extends Actionable,
         }
     };
 
+    static WebDriver driver() {
+        return THREAD_LOCAL.get().getDriver();
+    }
+
+    static void killAllRunningThreads() {
+        BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
+    }
+
+    static <T> T pageFactory(Class<T> clazz) {
+        return PageFactory.initElements(driver(), clazz);
+    }
+
     @Override
     default void quit() {
         BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
     }
 
+    /**
+     * Wait for dynamic element to display
+     */
+
+    default WebElement dynamicElement(By by, int timeOut) {
+        WebDriverWait wait = new WebDriverWait(driver(), timeOut);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
 
     @Override
     default void onTimeout() {
@@ -134,9 +157,5 @@ public interface Browser<T extends WebDriver> extends Actionable,
     default Object executeAsyncScript(String script, Object... args) {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver();
         return javascriptExecutor.executeAsyncScript(script, args);
-    }
-
-    static WebDriver driver() {
-        return THREAD_LOCAL.get().getDriver();
     }
 }
