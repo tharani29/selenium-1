@@ -10,6 +10,7 @@ import static org.openqa.selenium.By.linkText;
 
 /**
  * This enum is a Supplier of ByLinkText from Selenium By API.
+ * Created by sayem on 12/4/15.
  */
 public enum LinkText implements Supplier<By> {
 

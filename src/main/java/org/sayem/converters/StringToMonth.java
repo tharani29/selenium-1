@@ -8,6 +8,9 @@ import java.time.Month;
 
 import static org.sayem.converters.StringToMonth.MonthMapper.MONTH_MAPPER;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public enum StringToMonth implements Locator<String, Month> {
 
     TO_MONTH;

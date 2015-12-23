@@ -9,6 +9,7 @@ import static org.openqa.selenium.By.partialLinkText;
 
 /**
  * This enum is a Supplier of  ByPartialLinkText from Selenium By API.
+ * Created by sayem on 12/4/15.
  */
 public enum PartialLinkText implements Supplier<By> {
 

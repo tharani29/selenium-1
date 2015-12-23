@@ -1,4 +1,4 @@
-package org.sayem.rest.api;
+package org.sayem.api;
 
 import java.util.function.Supplier;
 

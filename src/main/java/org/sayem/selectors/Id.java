@@ -8,6 +8,7 @@ import static org.openqa.selenium.By.id;
 
 /**
  * This enum is a Supplier of ById from Selenium By API.
+ * Created by sayem on 12/4/15.
  */
 public enum Id implements Supplier<By> {
 

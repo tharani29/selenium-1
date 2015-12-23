@@ -1,13 +1,16 @@
-package org.sayem.pages;
+package org.sayem.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.sayem.Browser;
 import org.sayem.converters.GetText;
 import org.sayem.converters.OptionalGetter;
 import org.sayem.forms.FormControl;
 import org.sayem.locators.Locators;
 import org.sayem.selectors.ClassName;
-import org.sayem.selenium.*;
+import org.sayem.selenium.Clickable;
+import org.sayem.selenium.Element;
+import org.sayem.selenium.Locator;
 import org.slf4j.Logger;
 
 import java.util.List;
@@ -15,28 +18,24 @@ import java.util.function.Supplier;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
-public class Page<T extends Page<?>> implements FormControl<Page<?>>, SearchScope<Page<?>> {
+/**
+ * Created by sayem on 12/22/15.
+ */
+public class Page<T extends Page<?>> implements FormControl<Page<?>> {
 
     public static final Logger logger = getLogger(Page.class);
-    protected final Clickable clickable;
-    private final Browser<?> browser;
+    protected Clickable clickable;
+    protected Browser<?> browser;
     private final T parent;
-    protected Page<?> page;
 
-    public Page(Page page, T parent) {
-        this(page.browser, null, parent);
+    public Page() {
+        this.parent = null;
     }
 
     public Page(Browser<?> browser, Clickable clickable, T parent) {
         this.browser = browser;
         this.clickable = clickable;
         this.parent = parent;
-    }
-
-    public Page(Browser<?> browser) {
-        this.browser = browser;
-        this.parent = null;
-        this.clickable = null;
     }
 
     public final void open() {
@@ -126,5 +125,4 @@ public class Page<T extends Page<?>> implements FormControl<Page<?>>, SearchScop
         browser.defaultContent();
         return this;
     }
-
 }

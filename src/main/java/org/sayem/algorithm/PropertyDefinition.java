@@ -4,6 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class PropertyDefinition {
 
     public int getCount() {

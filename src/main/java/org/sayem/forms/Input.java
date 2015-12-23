@@ -1,8 +1,5 @@
 package org.sayem.forms;
 
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.sayem.algorithm.Retry;
 import org.sayem.conditions.Equals;
 import org.sayem.conditions.StringContains;
@@ -14,6 +11,8 @@ import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
+import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.slf4j.Logger;
 
 import java.util.Optional;
@@ -23,6 +22,9 @@ import java.util.stream.Stream;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Input<T extends SearchScope<T>> extends Locating<T, Optional<Element>> {
 
     public static final Logger log = getLogger(Input.class);

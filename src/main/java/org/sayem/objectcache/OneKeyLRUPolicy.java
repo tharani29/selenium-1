@@ -1,10 +1,12 @@
 package org.sayem.objectcache;
 
-
 import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class OneKeyLRUPolicy<K> implements OneKeyCachePolicy<K> {
     private final Set<K> accessLog = new LinkedHashSet<>();
 

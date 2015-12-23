@@ -7,6 +7,9 @@ import org.slf4j.Logger;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class ElementFinder implements Locator<SearchContext, Element> {
 
     public static final Logger logger = getLogger(ElementFinder.class);

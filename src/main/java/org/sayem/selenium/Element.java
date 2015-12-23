@@ -9,6 +9,9 @@ import java.util.List;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Element implements SearchScope<Element>, WebElement, Locatable {
 
     private static final Logger logger = getLogger(Element.class);

@@ -1,10 +1,12 @@
 package org.sayem.selenium;
 
-
 import java.util.Objects;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public interface Locator<T1, T2> extends Function<T1, T2> {
 
     /**

@@ -1,27 +1,28 @@
 package org.sayem.selenium;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebElement;
 import org.sayem.clickables.Button;
 import org.sayem.clickables.Link;
 import org.sayem.conditions.StringContains;
 import org.sayem.converters.*;
 import org.sayem.locators.Locators;
 import org.sayem.selectors.TagName;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
-import static java.util.stream.Collectors.toList;
 import static org.sayem.conditions.ElementPredicates.DISPLAYED;
 import static org.sayem.conditions.ElementPredicates.NOT_NULL;
-import static org.sayem.locators.Locators.element;
+import static java.util.stream.Collectors.toList;
 
-
+/**
+ * Created by sayem on 12/4/15.
+ */
 public interface SearchScope<T extends SearchScope<T>>
         extends SearchContext,    //<1>
         ExplicitWait<T> {
@@ -73,7 +74,7 @@ public interface SearchScope<T extends SearchScope<T>>
      *
      * @param by selector
      * @return A stream of all {@link Element}s, or an empty stream if nothing matches.
-     * @see org.openqa.selenium.By
+     * @see By
      */
     default Stream<Element> findElements(Supplier<By> by) {           //<6>
         return findElements(by.get()).stream().map(Element::new);
@@ -160,7 +161,7 @@ public interface SearchScope<T extends SearchScope<T>>
      */
     @SuppressWarnings("unchecked")
     default Clickable link(Supplier<By> selector) {
-        return new Link<>((T) this, element(selector));
+        return new Link<>((T) this, Locators.element(selector));
     }
 
 }

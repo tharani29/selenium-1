@@ -1,10 +1,12 @@
 package org.sayem.domain;
 
-
 import java.util.Set;
 
 import static com.google.common.collect.Sets.newHashSet;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class SetDiff<T> {
 
     private final Set<T> expected;

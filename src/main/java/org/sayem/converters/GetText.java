@@ -6,6 +6,9 @@ import org.sayem.selenium.Locator;
 
 import static org.sayem.selectors.TagName.A;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public enum GetText implements Locator<Element, String> {
     CHECKED {
         @Override

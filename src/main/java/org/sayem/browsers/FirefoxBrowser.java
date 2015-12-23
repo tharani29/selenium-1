@@ -1,14 +1,24 @@
 package org.sayem.browsers;
 
+import org.sayem.browsers.config.IBrowserThreads;
+import org.openqa.selenium.Proxy;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.sayem.selenium.CachedWebDriverSupplier;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class FirefoxBrowser implements CachedWebDriverSupplier<FirefoxDriver> {
+/**
+ * Created by sayem on 12/4/15.
+ */
+public class FirefoxBrowser implements IBrowserThreads {
+
     @Override
-    public FirefoxDriver init() {
-        return new FirefoxDriver();
-//        FirefoxBinary binary = new FirefoxBinary(new File("src/main/resources/Firefox/Contents/MacOS/firefox-bin"));
-//        FirefoxProfile profile = new FirefoxProfile(new File("src/main/resources/Firefox/Profiles/default"));
-//        return new FirefoxDriver(binary, profile);
+    public DesiredCapabilities getDesiredCapabilities(Proxy proxySettings) {
+        DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+        return addProxySettings(capabilities, proxySettings);
+    }
+
+    @Override
+    public WebDriver getWebDriverObject(DesiredCapabilities capabilities) {
+        return new FirefoxDriver(capabilities);
     }
 }

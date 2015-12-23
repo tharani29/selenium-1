@@ -2,6 +2,9 @@ package org.sayem.selenium;
 
 import java.util.function.Predicate;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Locating<T1 extends SearchScope<T1>, T2> {
 
     private final T1 where;

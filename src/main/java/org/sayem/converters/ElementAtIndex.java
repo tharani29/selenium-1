@@ -1,10 +1,12 @@
 package org.sayem.converters;
 
-
 import org.sayem.selenium.Locator;
 
 import java.util.List;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class ElementAtIndex<T> implements Locator<List<T>, T> {
 
     private final int index;

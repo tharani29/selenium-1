@@ -1,10 +1,13 @@
 package org.sayem.algorithm;
 
-import org.apache.log4j.Logger;
+import org.testng.log4testng.Logger;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static org.apache.log4j.Logger.getLogger;
+import static org.testng.log4testng.Logger.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public interface Retryable<T> {
 
     Logger LOGGER = getLogger(Retryable.class);

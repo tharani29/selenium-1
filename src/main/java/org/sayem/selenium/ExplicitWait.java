@@ -12,6 +12,9 @@ import java.util.function.Supplier;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 import static java.util.concurrent.TimeUnit.SECONDS;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public interface ExplicitWait<T extends SearchScope<T>> {
 
     /**

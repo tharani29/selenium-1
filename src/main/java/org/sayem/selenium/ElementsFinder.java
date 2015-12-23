@@ -10,7 +10,9 @@ import java.util.List;
 import static java.util.stream.Collectors.toList;
 import static org.slf4j.LoggerFactory.getLogger;
 
-
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class ElementsFinder implements Locator<SearchContext, List<WebElement>> {
     public static final Logger logger = getLogger(ElementsFinder.class);
     private By by;

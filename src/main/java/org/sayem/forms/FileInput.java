@@ -1,13 +1,12 @@
 package org.sayem.forms;
 
-
-import org.openqa.selenium.By;
 import org.sayem.algorithm.Retry;
 import org.sayem.converters.OptionalGetter;
 import org.sayem.locators.Locators;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.SearchScope;
+import org.openqa.selenium.By;
 import org.slf4j.Logger;
 
 import java.io.File;
@@ -17,6 +16,9 @@ import java.util.function.Supplier;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class FileInput<T extends SearchScope<T>> extends Locating<T, Optional<Element>> {
 
     public static final Logger log = getLogger(FileInput.class);

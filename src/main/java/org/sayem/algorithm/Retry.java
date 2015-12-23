@@ -2,6 +2,9 @@ package org.sayem.algorithm;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Retry {
 
     private final long interval;

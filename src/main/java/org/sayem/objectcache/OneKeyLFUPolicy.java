@@ -1,8 +1,10 @@
 package org.sayem.objectcache;
 
-
 import org.sayem.algorithm.SortedCounter;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class OneKeyLFUPolicy<K> implements OneKeyCachePolicy<K> {
     private final SortedCounter<K> sortedCounter = new SortedCounter<>();
 

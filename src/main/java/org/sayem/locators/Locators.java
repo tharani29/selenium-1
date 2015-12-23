@@ -1,14 +1,17 @@
 package org.sayem.locators;
 
-import org.openqa.selenium.By;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locator;
 import org.sayem.selenium.SearchScope;
+import org.openqa.selenium.By;
 
 import java.util.Optional;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Locators<T1 extends SearchScope<T1>, T2>
         implements Locator<T1, T2> {
 

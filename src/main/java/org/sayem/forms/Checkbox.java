@@ -1,16 +1,18 @@
 package org.sayem.forms;
 
-
-import org.openqa.selenium.By;
 import org.sayem.conditions.StringEquals;
 import org.sayem.converters.GetText;
 import org.sayem.locators.Locators;
 import org.sayem.selenium.Element;
 import org.sayem.selenium.Locating;
 import org.sayem.selenium.SearchScope;
+import org.openqa.selenium.By;
 
 import java.util.function.Supplier;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Checkbox<T extends SearchScope<T>>
         extends Locating<T, Element> {
 

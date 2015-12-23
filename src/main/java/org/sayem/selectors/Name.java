@@ -6,6 +6,7 @@ import java.util.function.Supplier;
 
 /**
  * This enum is a Supplier of ByName from Selenium By API.
+ * Created by sayem on 12/4/15.
  */
 public enum Name implements Supplier<By> {
 

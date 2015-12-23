@@ -9,13 +9,12 @@ import static org.openqa.selenium.By.cssSelector;
 
 /**
  * This enum is a Supplier of ByCssSelector from Selenium By API.
+ * Created by sayem on 12/4/15.
  */
 public enum CssSelector implements Supplier<By> {
 
-    UPDATE("input[value='Update']"),
-    CONTINUE("input[value='Continue']"),
-    NEED_CONIRM("input[value='Need Confirm']"),
-    SUBMIT("input[type='Submit']");
+    ACCOUNT(".skip-link.skip-account"),
+    REGISTER(".links > ul > li:nth-of-type(5) > a");
 
     private final By by;
 

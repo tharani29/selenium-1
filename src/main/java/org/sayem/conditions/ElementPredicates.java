@@ -4,6 +4,9 @@ import org.sayem.selenium.Element;
 
 import java.util.function.Predicate;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public enum ElementPredicates implements Predicate<Element> {
     NOT_NULL {
         @Override

@@ -10,6 +10,9 @@ import java.util.Map;
 
 import static com.google.common.collect.Maps.newHashMap;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class SortedCounter<T> {
     private final Map<T, Integer> counter = newHashMap();
     private final Multimap<Integer, T> sortedCounter;

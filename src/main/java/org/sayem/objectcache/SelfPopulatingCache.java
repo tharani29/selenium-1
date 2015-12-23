@@ -1,11 +1,13 @@
 package org.sayem.objectcache;
 
-
 import java.util.Collection;
 import java.util.Map;
 
 import static com.google.common.collect.Maps.newHashMap;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class SelfPopulatingCache<K, V> {
 
     private final int maxSize;

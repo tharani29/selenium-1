@@ -8,6 +8,9 @@ import org.slf4j.Logger;
 
 import static org.slf4j.LoggerFactory.getLogger;
 
+/**
+ * Created by sayem on 12/4/15.
+ */
 public class Clickables<T extends SearchScope<T>> implements Clickable {
 
     private static final Logger log = getLogger(Clickables.class);

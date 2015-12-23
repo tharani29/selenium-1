@@ -6,7 +6,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 
 /**
- * Created by yujunliang on 7/26/14.
+ * Created by sayem on 12/4/15.
  */
 public enum OptionalPresents implements Predicate<Optional<Element>> {
     PRESENT;

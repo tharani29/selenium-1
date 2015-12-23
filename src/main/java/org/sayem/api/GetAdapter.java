@@ -1,4 +1,4 @@
-package org.sayem.rest.api;
+package org.sayem.api;
 
 import com.jayway.restassured.http.ContentType;
 import com.jayway.restassured.path.json.JsonPath;
@@ -9,7 +9,7 @@ import static com.jayway.restassured.RestAssured.given;
 /**
  * Created by sayem on 12/7/15.
  */
-public class PutAdapter implements RestAdapter {
+public class GetAdapter implements RestAdapter {
     @Override
     public JsonPath execute() {
         Response response = given()
@@ -23,7 +23,7 @@ public class PutAdapter implements RestAdapter {
                 .log().all(true)
 
                 .when()
-                .put("");
+                .get("");
 
         String json = response.asString();
         return new JsonPath(json);
