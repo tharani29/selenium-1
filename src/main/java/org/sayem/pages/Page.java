@@ -18,10 +18,10 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class Page<T extends Page<?>> implements FormControl<Page<?>>, SearchScope<Page<?>> {
 
     public static final Logger logger = getLogger(Page.class);
-    private final Browser<?> browser;
     protected final Clickable clickable;
-    protected Page<?> page;
+    private final Browser<?> browser;
     private final T parent;
+    protected Page<?> page;
 
     public Page(Page page, T parent) {
         this(page.browser, null, parent);
