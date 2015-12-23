@@ -8,10 +8,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
+import static org.openqa.selenium.Proxy.ProxyType.MANUAL;
 import static org.sayem.browsers.config.BrowserType.FIREFOX;
 import static org.sayem.browsers.config.BrowserType.valueOf;
-import static org.openqa.selenium.Proxy.ProxyType.MANUAL;
 
 /**
  * Created by sayem on 12/4/15.
@@ -91,9 +92,16 @@ public class BrowserThreads {
             }
 
             webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
+            setup();
         } else {
             webdriver = selectedBrowserType.browser.getWebDriverObject(desiredCapabilities);
+            setup();
         }
+    }
+
+    private void setup() {
+        webdriver.navigate().to("http://enterprise-demo.user.magentotrial.com/");
+        webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 }
 

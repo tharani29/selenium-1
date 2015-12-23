@@ -14,6 +14,6 @@ public class App {
     @Test
     public void googleCheeseExample() {
         HomePage<?> home = new HomePage<>();
-        home.first().second().third();
+        home.first().second().third().quit();
     }
 }

@@ -2,7 +2,6 @@ package org.sayem.pages;
 
 import org.sayem.Browser;
 import org.sayem.page.Page;
-import org.sayem.selenium.Clickable;
 
 /**
  * Created by sayem on 12/4/15.
@@ -13,15 +12,11 @@ public class HomePage<T extends Page<?>> extends Page<T> {
 
     public HomePage() {
         super();
-        this.secondPage = new SecondPage<>(browser, clickable, this);
-    }
-    public HomePage(Browser<?> browser, Clickable clickable, T parent) {
-        super(browser, clickable, parent);
-        this.secondPage = new SecondPage<>(browser, clickable, this);
+        this.secondPage = new SecondPage<>(this);
     }
 
     public SecondPage<HomePage<T>> first() {
-        System.out.println("FirstPage method....");
+        Browser.driver().getTitle();
         return this.secondPage;
     }
 }

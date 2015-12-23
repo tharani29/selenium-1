@@ -4,6 +4,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.Augmenter;
+import org.sayem.Browser;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
 
@@ -11,12 +12,10 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import static org.sayem.Browser.driver;
-
 /**
  * Created by sayem on 12/4/15.
  */
-public class ScreenshotListener extends TestListenerAdapter {
+public class ScreenshotListener extends TestListenerAdapter{
 
     private boolean createFile(File screenshot) {
         boolean fileCreated = false;
@@ -51,7 +50,7 @@ public class ScreenshotListener extends TestListenerAdapter {
     @Override
     public void onTestFailure(ITestResult failingTest) {
         try {
-            WebDriver driver = driver();
+            WebDriver driver = Browser.driver();
             String screenshotDirectory = System.getProperty("screenshotDirectory", "target/screenshots");
             String screenshotAbsolutePath = screenshotDirectory + File.separator + System.currentTimeMillis() + "_" + failingTest.getName() + ".png";
             File screenshot = new File(screenshotAbsolutePath);

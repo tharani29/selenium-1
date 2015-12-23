@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
 import org.sayem.browsers.config.BrowserThreads;
+import org.sayem.forms.FormControl;
 import org.sayem.selenium.*;
 
 import java.util.ArrayList;
@@ -16,7 +17,7 @@ import java.util.Set;
  * Created by sayem on 12/4/15.
  */
 public interface Browser<T extends WebDriver> extends Actionable,
-        SearchScope<Browser<T>>,
+        SearchScope<Browser<T>>, FormControl<Browser<T>>,
         WebDriver,
         HasInputDevices, JavascriptExecutor, HasCapabilities {
 
@@ -29,6 +30,12 @@ public interface Browser<T extends WebDriver> extends Actionable,
             return browserThreads;
         }
     };
+
+    @Override
+    default void quit() {
+        BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
+    }
+
 
     @Override
     default void onTimeout() {
@@ -131,9 +138,5 @@ public interface Browser<T extends WebDriver> extends Actionable,
 
     static WebDriver driver() {
         return THREAD_LOCAL.get().getDriver();
-    }
-
-    static void killAllRunningThreads() {
-        BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
     }
 }
