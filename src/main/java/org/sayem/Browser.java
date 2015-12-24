@@ -9,6 +9,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sayem.browsers.config.BrowserThreads;
 import org.sayem.forms.FormControl;
+import org.sayem.properties.PropertiesUtil;
+import org.sayem.properties.Repository;
 import org.sayem.selenium.*;
 
 import java.util.ArrayList;
@@ -44,6 +46,10 @@ public interface Browser<T extends WebDriver> extends Actionable,
 
     static <T> T pageFactory(Class<T> clazz) {
         return PageFactory.initElements(driver(), clazz);
+    }
+
+    static String getProperties(Repository repository) {
+        return PropertiesUtil.create(Repository.LOCATION.getValue()).data(repository);
     }
 
     @Override

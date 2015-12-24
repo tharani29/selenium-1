@@ -5,6 +5,8 @@ import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.sayem.Browser;
+import org.sayem.properties.Repository;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -19,7 +21,7 @@ import static org.sayem.browsers.config.BrowserType.valueOf;
  */
 public class BrowserThreads {
 
-    private final BrowserType defaultBrowserType = FIREFOX;
+    private final BrowserType defaultBrowserType = getBrowser();
     private final String browser = System.getProperty("browser", defaultBrowserType.toString()).toUpperCase();
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private final String systemArchitecture = System.getProperty("os.arch");
@@ -92,7 +94,7 @@ public class BrowserThreads {
             }
 
             webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
-            setup();
+            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } else {
             webdriver = selectedBrowserType.browser.getWebDriverObject(desiredCapabilities);
             setup();
@@ -100,8 +102,26 @@ public class BrowserThreads {
     }
 
     private void setup() {
-        webdriver.navigate().to("http://enterprise-demo.user.magentotrial.com/");
+        String url = "http://enterprise-demo.user.magentotrial.com/";
+        try {
+            webdriver.navigate().to(Browser.getProperties(Repository.URL));
+        } catch (NullPointerException ignored) {
+            System.err.println("No URL specified, defaulting to '" + url + "'...");
+            webdriver.navigate().to(url);
+        }
         webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    }
+
+    private BrowserType getBrowser() {
+        BrowserType browserType = FIREFOX;
+        try {
+            browserType = valueOf(Browser.getProperties(Repository.BROWSER).toUpperCase());
+        } catch (IllegalArgumentException ignored) {
+            System.err.println("Unknown driver specified, defaulting to '" + browserType + "'...");
+        } catch (NullPointerException ignored) {
+            System.err.println("No driver specified, defaulting to '" + browserType + "'...");
+        }
+        return browserType;
     }
 }
 

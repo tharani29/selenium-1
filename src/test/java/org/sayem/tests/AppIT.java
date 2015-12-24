@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
  * Created by sayem on 12/4/15.
  */
 @Listeners(ScreenshotListener.class)
-public class App {
+public class AppIT {
 
     @Test
     public void googleCheeseExample() {
