@@ -97,7 +97,7 @@ public class BrowserThreads {
             webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } else {
             webdriver = selectedBrowserType.browser.getWebDriverObject(desiredCapabilities);
-            setup();
+            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
     }
 

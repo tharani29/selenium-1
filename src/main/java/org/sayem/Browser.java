@@ -40,7 +40,7 @@ public interface Browser<T extends WebDriver> extends Actionable,
         return THREAD_LOCAL.get().getDriver();
     }
 
-    static void killAllRunningThreads() {
+    static void quitBrowser() {
         BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
     }
 
