@@ -19,7 +19,7 @@ public class RegisterPage implements Browser<RegisterPage> {
 
         sendBy(Id.FIRST_NAME, "Syed");
         sendBy(Id.LAST_NAME, "Sayem");
-        sendBy(Id.EMAIL_ADDRESS, "syed"+uuid+"@gmail.com");
+        sendBy(Id.EMAIL_ADDRESS, "syed" + uuid + "@gmail.com");
         select(Id.GENDER, "Male");
         sendBy(Id.PASSWORD, "user123");
         sendBy(Id.PASSWD_CONFIRM, "user123");

@@ -23,12 +23,12 @@ public class MadisonIslandRegisterIT {
     }
 
     @AfterMethod
-    public void clearCookies(){
+    public void clearCookies() {
         Browser.driver().manage().deleteAllCookies();
     }
 
     @AfterSuite
-    public void quitBrowser(){
+    public void quitBrowser() {
         Browser.quitBrowser();
     }
 }

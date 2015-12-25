@@ -55,8 +55,7 @@ public class ReporterNG implements IReporter {
 
                 if (result.getThrowable() != null) {
                     test.log(status, result.getThrowable());
-                }
-                else {
+                } else {
                     test.log(status, "Test " + status.toString().toLowerCase() + "ed");
                 }
 

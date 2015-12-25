@@ -28,7 +28,7 @@ public class HowToUploadFile {
     }
 
     @AfterSuite
-    public void tearDown(){
+    public void tearDown() {
         quitBrowser();
     }
 }
