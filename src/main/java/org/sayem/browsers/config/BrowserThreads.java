@@ -21,6 +21,7 @@ import static org.sayem.browsers.config.BrowserType.valueOf;
  */
 public class BrowserThreads {
 
+    private final String defaultUrl = System.getProperty("seleniumUrl");
     private final BrowserType defaultBrowserType = getBrowser();
     private final String browser = System.getProperty("browser", defaultBrowserType.toString()).toUpperCase();
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
@@ -46,7 +47,6 @@ public class BrowserThreads {
             DesiredCapabilities desiredCapabilities = selectedBrowserType.browser.getDesiredCapabilities(proxy);
             instantiateWebDriver(desiredCapabilities);
         }
-
         return webdriver;
     }
 
@@ -97,19 +97,19 @@ public class BrowserThreads {
             webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } else {
             webdriver = selectedBrowserType.browser.getWebDriverObject(desiredCapabilities);
-            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            setup();
         }
     }
 
     private void setup() {
-        String url = "http://enterprise-demo.user.magentotrial.com/";
         try {
-            webdriver.navigate().to(Browser.getProperties(Repository.URL));
+            webdriver.navigate().to(defaultUrl);
+            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (NullPointerException ignored) {
-            System.err.println("No URL specified, defaulting to '" + url + "'...");
-            webdriver.navigate().to(url);
+            System.err.println("No URL specified, defaulting to properties url: " + Browser.getProperties(Repository.URL) + "'...");
+            webdriver.navigate().to(Browser.getProperties(Repository.URL));
+            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
-        webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     private BrowserType getBrowser() {

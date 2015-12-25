@@ -21,6 +21,7 @@
         <maven.compiler.version>2.3.2</maven.compiler.version>
         <overwrite.binaries>false</overwrite.binaries>
         <browser>firefox</browser>
+        <seleniumUrl>https://www.google.com/</seleniumUrl>
         <threads>1</threads>
         <remote>false</remote>
         <seleniumGridURL/>
@@ -161,6 +162,7 @@
                             <threadCount>${threads}</threadCount>
                             <systemPropertyVariables>
                                 <browser>${browser}</browser>
+                                <seleniumUrl>${seleniumUrl}</seleniumUrl>
                                 <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
                                 <remoteDriver>${remote}</remoteDriver>
                                 <gridURL>${seleniumGridURL}</gridURL>

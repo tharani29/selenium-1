@@ -40,6 +40,10 @@ public interface Browser<T extends WebDriver> extends Actionable,
         return THREAD_LOCAL.get().getDriver();
     }
 
+    static void setBrowserUrl(String value) {
+        System.setProperty("seleniumUrl", value);
+    }
+
     static void quitBrowser() {
         BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
     }
