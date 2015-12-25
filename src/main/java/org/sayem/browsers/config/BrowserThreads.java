@@ -26,6 +26,7 @@ public class BrowserThreads {
     private final String browser = System.getProperty("browser", defaultBrowserType.toString()).toUpperCase();
     private final String operatingSystem = System.getProperty("os.name").toUpperCase();
     private final String systemArchitecture = System.getProperty("os.arch");
+    private final String systemVersion = System.getProperty("os.version");
     private final boolean useRemoteWebDriver = Boolean.getBoolean("remoteDriver");
     private final boolean proxyEnabled = Boolean.getBoolean("proxyEnabled");
     private final String proxyHostname = System.getProperty("proxyHost");
@@ -71,6 +72,7 @@ public class BrowserThreads {
     private void instantiateWebDriver(DesiredCapabilities desiredCapabilities) {
         System.out.println(" ");
         System.out.println("Current Operating System: " + operatingSystem);
+        System.out.println("Current Version: " + systemVersion);
         System.out.println("Current Architecture: " + systemArchitecture);
         System.out.println("Current Browser Selection: " + selectedBrowserType);
         System.out.println(" ");

@@ -16,6 +16,7 @@ public class MadisonIslandRegisterIT {
 
     @Test
     public void googleCheeseExample() {
+        Browser.setBrowserUrl("http://enterprise-demo.user.magentotrial.com/");
         HomePage page = Browser.pageFactory(HomePage.class);
         page.register().createAnAccount();
     }

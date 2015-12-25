@@ -1,6 +1,7 @@
 package org.sayem.tests;
 
 import org.openqa.selenium.By;
+import org.sayem.Browser;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class HowToUploadFile {
     @Test
     public void magentoTest() throws InterruptedException {
         String homeDir = System.getProperty("user.home");
-        driver().navigate().to("http://the-internet.herokuapp.com/upload");
+        Browser.setBrowserUrl("http://the-internet.herokuapp.com/upload");
         driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         driver().findElement(By.id("file-upload")).sendKeys(homeDir + "/IdeaProjects/selenium/some-file.txt");
         driver().findElement(By.id("file-submit")).click();
