@@ -109,6 +109,11 @@
             <version>${selenium.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.40</version>
+        </dependency>
+        <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>phantomjsdriver</artifactId>
             <version>${phantomjsdriver.version}</version>
