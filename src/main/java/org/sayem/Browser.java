@@ -1,5 +1,6 @@
 package org.sayem;
 
+import net.lightbody.bmp.BrowserMobProxy;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
@@ -38,6 +39,14 @@ public interface Browser<T extends WebDriver> extends Actionable,
 
     static WebDriver driver() {
         return THREAD_LOCAL.get().getDriver();
+    }
+
+    static WebDriver browserMobProxyEnabledDriver() throws Exception {
+        return THREAD_LOCAL.get().getBrowserMobProxyEnabledDriver();
+    }
+
+    static BrowserMobProxy browserMobProxy() {
+        return THREAD_LOCAL.get().getBrowserMobProxy();
     }
 
     static void setBrowserUrl(String value) {
