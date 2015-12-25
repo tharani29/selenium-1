@@ -13,7 +13,7 @@ import static org.openqa.selenium.By.partialLinkText;
  */
 public enum PartialLinkText implements Supplier<By> {
 
-    UI_DATEPICKER_CLOSE("ui-datepicker-close");
+    PARTIAL_LINK("partial-link");
 
     private final By by;
 

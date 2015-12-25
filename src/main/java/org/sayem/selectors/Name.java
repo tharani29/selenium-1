@@ -10,11 +10,7 @@ import java.util.function.Supplier;
  */
 public enum Name implements Supplier<By> {
 
-    FILTER_EVENT("filter-events"),
-    FILE("file"),
-    Q("q"),
-    MAILING_OPTION("customFieldDS.customfield_ROW0_value"),
-    QUANTITY("cartDS.shoppingcart_ROW0_m_orderItemVector_ROW0_m_quantity");
+    NAME("name");
 
     private final By by;
 

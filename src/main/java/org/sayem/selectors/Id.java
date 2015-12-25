@@ -12,22 +12,15 @@ import static org.openqa.selenium.By.id;
  */
 public enum Id implements Supplier<By> {
 
-    LOCATION("location"),
-    MAIN("main"),
-    MAIN_NAV("main-nav"),
-    MAIN_LEANDER_BOARD("mainLeaderboard"),
-    SECONDARY_NAV("secondary-nav"),
-    GLOBAL_NAV("global-nav"),
-    UI_DATEPICKER_DIV("ui-datepicker-div"),
-    CONTENT("content"),
-    EXTJS_DATEPICKER_TRIGGER("menuitem-1017-textEl"),
-    EXTJS_CALENDAR("datemenu-1014"),
-    EXTJS_CALENDAR_MONTH_YEAR("splitbutton-1020-btnInnerEl"),
-    EXTJS_CALENDAR_PREV_MONTH("datepicker-1015-prevEl"),
-    EXTJS_CALENDAR_NEXT_MONTH("datepicker-1015-nextEl"),
-
-    DATE_PICKER("datepicker");
-
+    FIRST_NAME("firstname"),
+    LAST_NAME("lastname"),
+    EMAIL_ADDRESS("email_address"),
+    DOB_MONTH("month"),
+    DOB_DATE("day"),
+    DOB_YEAR("year"),
+    GENDER("gender"),
+    PASSWORD("password"),
+    PASSWD_CONFIRM("confirmation");
 
     private final By by;
 

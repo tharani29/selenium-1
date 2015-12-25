@@ -17,7 +17,7 @@ public class MadisonIslandRegisterIT {
     @Test
     public void googleCheeseExample() {
         HomePage page = Browser.pageFactory(HomePage.class);
-        page.register();
+        page.register().createAnAccount();
     }
 
     @AfterMethod

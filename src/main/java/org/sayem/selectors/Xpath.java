@@ -11,7 +11,9 @@ import static org.openqa.selenium.By.xpath;
  * Created by sayem on 12/4/15.
  */
 public enum Xpath implements Supplier<By> {
-    ACCOUNT_MENU("//*[@id='header-account']/div/ul/li[1]/a");
+
+    ACCOUNT_MENU("//*[@id='header-account']/div/ul/li[1]/a"),
+    REGISTER_BTN(".//*[@id='form-validate']/div[2]/button");
 
     private final By by;
 
