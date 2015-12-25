@@ -11,13 +11,7 @@ import static org.openqa.selenium.By.xpath;
  * Created by sayem on 12/4/15.
  */
 public enum Xpath implements Supplier<By> {
-    PARENT(".."),
-    DIV_CONTAINER_ID("//div[@id='container']"),
-    LOCATION("//div[@class='tools']/descendant::strong"),
-    //*[@id="sbse0"]/div[2]
-    GOOGLE_AUTOCOMPLETE("//*[@id='sbse0']/descendant::div"),
-    QUANTITY("//div[@id='ys_cartInfo']/descendant::input[@name='cartDS.shoppingcart_ROW0_m_orderItemVector_ROW0_m_quantity']"),
-    TABLE_CONTAINER("//*[@id=\"main\"]");
+    ACCOUNT_MENU("//*[@id='header-account']/div/ul/li[1]/a");
 
     private final By by;
 

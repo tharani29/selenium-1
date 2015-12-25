@@ -14,7 +14,8 @@ import static org.openqa.selenium.By.cssSelector;
 public enum CssSelector implements Supplier<By> {
 
     ACCOUNT(".skip-link.skip-account"),
-    REGISTER(".links > ul > li:nth-of-type(5) > a");
+    REGISTER(".links > ul > li:nth-of-type(5) > a"),
+    ACCOUNT_MENU(".links>ul>li>a");
 
     private final By by;
 
