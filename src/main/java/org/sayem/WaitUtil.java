@@ -1,18 +1,85 @@
 package org.sayem;
 
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import com.google.common.base.Predicate;
 import org.openqa.selenium.*;
 import org.openqa.selenium.internal.Locatable;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Created by sayem on 12/26/15.
  */
 public class WaitUtil {
+
+
+    public static void fluentWaitIgnoringSingleException(){
+        Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
+                .withTimeout(15, TimeUnit.SECONDS)
+                .pollingEvery(500, TimeUnit.MILLISECONDS)
+                .ignoring(NoSuchElementException.class)
+                .withMessage("The message you will see in if a TimeoutException is thrown");
+
+        wait.until(angularHasFinishedProcessing());
+    }
+
+    public static void fluentWaitIgnoringACollectionOfExceptions(){
+
+        List<Class<? extends Throwable>> exceptionsToIgnore = new ArrayList<Class<? extends Throwable>>() {
+            {
+                add(NoSuchElementException.class);
+                add(StaleElementReferenceException.class);
+            }
+        };
+
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(Browser.driver())
+                .withTimeout(15, TimeUnit.SECONDS)
+                .pollingEvery(500, TimeUnit.MILLISECONDS)
+                .ignoreAll(exceptionsToIgnore)
+                .withMessage("The message you will see in if a TimeoutException is thrown");
+
+
+        wait.until(angularHasFinishedProcessing());
+    }
+
+    public static void fluentWaitIgnoringAListOfExceptions(){
+        Wait<WebDriver> wait = new FluentWait<WebDriver>(Browser.driver())
+                .withTimeout(15, TimeUnit.SECONDS)
+                .pollingEvery(500, TimeUnit.MILLISECONDS)
+                .ignoreAll(Arrays.asList(NoSuchElementException.class, StaleElementReferenceException.class))
+                .withMessage("The message you will see in if a TimeoutException is thrown");
+
+        wait.until(angularHasFinishedProcessing());
+    }
+
+    public static void fluentWaitIgnoringMultipleExceptions(){
+        Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
+                .withTimeout(15, TimeUnit.SECONDS)
+                .pollingEvery(500, TimeUnit.MILLISECONDS)
+                .ignoring(NoSuchElementException.class)
+                .ignoring(StaleElementReferenceException.class)
+                .withMessage("The message you will see in if a TimeoutException is thrown");
+
+
+        wait.until(angularHasFinishedProcessing());
+    }
+
+    public static void angularHasFinish() {
+        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
+        wait.until(jQueryAJAXCallsHaveCompleted());
+    }
+
+    public static void jqueryHasFinish() {
+        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
+        wait.until(angularHasFinishedProcessing());
+    }
 
     Predicate<WebDriver> didWeFindElementFoo = driver -> driver.findElements(By.id("foo")).size() > 0;
 
@@ -41,16 +108,6 @@ public class WaitUtil {
             Point finalLocation = ((Locatable) element).getCoordinates().inViewPort();
             return initialLocation.equals(finalLocation);
         };
-    }
-
-    public static void angularHasFinish() {
-        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
-        wait.until(jQueryAJAXCallsHaveCompleted());
-    }
-
-    public static void jqueryHasFinish() {
-        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
-        wait.until(angularHasFinishedProcessing());
     }
 
     private static ExpectedCondition<Boolean> jQueryAJAXCallsHaveCompleted() {
