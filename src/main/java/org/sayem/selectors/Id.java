@@ -20,7 +20,10 @@ public enum Id implements Supplier<By> {
     DOB_YEAR("year"),
     GENDER("gender"),
     PASSWORD("password"),
-    PASSWD_CONFIRM("confirmation");
+    PASSWD_CONFIRM("confirmation"),
+
+    // http://the-internet.herokuapp.com/dropdown
+    dropdown("dropdown");
 
     private final By by;
 

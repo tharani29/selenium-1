@@ -177,4 +177,12 @@ public interface Browser<T extends WebDriver> extends Actionable,
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver();
         return javascriptExecutor.executeAsyncScript(script, args);
     }
+
+    static void delay(final long amount) {
+        try {
+            Thread.sleep(amount);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
