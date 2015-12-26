@@ -116,12 +116,7 @@ public class WaitTool {
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait()
 
             WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
-            wait.until((new ExpectedCondition<Boolean>() {
-                @Override
-                public Boolean apply(WebDriver driverObject) {
-                    return areElementsPresent(driverObject, by);
-                }
-            }));
+            wait.until(((ExpectedCondition<Boolean>) driverObject -> areElementsPresent(driverObject, by)));
 
             elements = driver.findElements(by);
             driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
@@ -155,13 +150,9 @@ public class WaitTool {
         try{
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait()
             new WebDriverWait(driver, timeOutInSeconds) {
-            }.until(new ExpectedCondition<Boolean>() {
-
-                @Override
-                public Boolean apply(WebDriver driverObject) {
-                    driverObject.navigate().refresh(); //refresh the page ****************
-                    return isElementPresentAndDisplay(driverObject, by);
-                }
+            }.until((ExpectedCondition<Boolean>) driverObject -> {
+                driverObject.navigate().refresh(); //refresh the page ****************
+                return isElementPresentAndDisplay(driverObject, by);
             });
             element = driver.findElement(by);
             driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
@@ -187,12 +178,8 @@ public class WaitTool {
         try{
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait()
             new WebDriverWait(driver, timeOutInSeconds) {
-            }.until(new ExpectedCondition<Boolean>() {
-
-                @Override
-                public Boolean apply(WebDriver driverObject) {
-                    return isTextPresent(driverObject, by, text); //is the Text in the DOM
-                }
+            }.until((ExpectedCondition<Boolean>) driverObject -> {
+                return isTextPresent(driverObject, by, text); //is the Text in the DOM
             });
             isPresent = isTextPresent(driver, by, text);
             driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
@@ -220,13 +207,7 @@ public class WaitTool {
         try{
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait()
             new WebDriverWait(driver, timeOutInSeconds) {
-            }.until(new ExpectedCondition<Boolean>() {
-
-                @Override
-                public Boolean apply(WebDriver driverObject) {
-                    return (Boolean) ((JavascriptExecutor) driverObject).executeScript(javaScript);
-                }
-            });
+            }.until((ExpectedCondition<Boolean>) driverObject -> (Boolean) ((JavascriptExecutor) driverObject).executeScript(javaScript));
             jscondition =  (Boolean) ((JavascriptExecutor) driver).executeScript(javaScript);
             driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
             return jscondition;
@@ -249,13 +230,8 @@ public class WaitTool {
         try{
             driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS); //nullify implicitlyWait()
             new WebDriverWait(driver, timeOutInSeconds) {
-            }.until(new ExpectedCondition<Boolean>() {
-
-                @Override
-                public Boolean apply(WebDriver driverObject) {
-                    return (Boolean) ((JavascriptExecutor) driverObject).executeScript("return jQuery.active == 0");
-                }
-            });
+            }.until((ExpectedCondition<Boolean>) driverObject -> (Boolean) ((JavascriptExecutor) driverObject)
+                    .executeScript("return jQuery.active == 0"));
             jQcondition = (Boolean) ((JavascriptExecutor) driver).executeScript("return jQuery.active == 0");
             driver.manage().timeouts().implicitlyWait(DEFAULT_WAIT_4_PAGE, TimeUnit.SECONDS); //reset implicitlyWait
             return jQcondition;
