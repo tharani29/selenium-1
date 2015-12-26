@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.sayem.browsers.config.BrowserThreads;
@@ -177,29 +176,5 @@ public interface Browser<T extends WebDriver> extends Actionable,
     default Object executeAsyncScript(String script, Object... args) {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver();
         return javascriptExecutor.executeAsyncScript(script, args);
-    }
-
-    default void angularHasFinish() {
-        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
-        wait.until(jQueryAJAXCallsHaveCompleted());
-    }
-
-    default void jqueryHasFinish() {
-        WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
-        wait.until(angularHasFinishedProcessing());
-    }
-
-    default ExpectedCondition<Boolean> jQueryAJAXCallsHaveCompleted() {
-        return driver -> (Boolean) ((JavascriptExecutor) driver)
-                .executeScript("return (window.jQuery != null) && (jQuery.active === 0);");
-    }
-
-
-    default ExpectedCondition<Boolean> angularHasFinishedProcessing() {
-        return driver -> Boolean.valueOf(((JavascriptExecutor) driver)
-                .executeScript("return (window.angular !== undefined) " +
-                        "&& (angular.element(document).injector() !== undefined) " +
-                        "&& (angular.element(document).injector().get('$http')" +
-                        ".pendingRequests.length === 0)").toString());
     }
 }
