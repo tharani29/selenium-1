@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,11 +15,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static org.slf4j.LoggerFactory.getLogger;
+
 /**
  * Created by sayem on 12/26/15.
  */
 public class WaitUtil {
 
+    public static Logger LOG = getLogger(WaitUtil.class);
 
     public static void fluentWaitIgnoringSingleException() {
         Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
@@ -200,5 +204,27 @@ public class WaitUtil {
         driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
         js.executeAsyncScript(LoadJQuery);
         System.out.println("Jquery is loaded.");
+    }
+
+
+    /**
+     * This Condition waits until all the active JQuery Ajax calls have stopped.
+     */
+
+    public static Boolean waitUntilJQueryAjaxStopped(WebDriver webDriver) {
+        try {
+            Long value = (Long) ((JavascriptExecutor) webDriver).executeScript("return jQuery.active");
+            if (LOG.isTraceEnabled()) {
+                LOG.trace(value + " jQuery ajax calls are currently active.");
+            }
+
+            return value.equals(0L);
+        } catch (WebDriverException e) {
+            if (e.getMessage().contains("jQuery is not defined")) {
+                return false;
+            } else {
+                throw e;
+            }
+        }
     }
 }
