@@ -20,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class WaitUtil {
 
 
-    public static void fluentWaitIgnoringSingleException(){
+    public static void fluentWaitIgnoringSingleException() {
         Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
                 .withTimeout(15, TimeUnit.SECONDS)
                 .pollingEvery(500, TimeUnit.MILLISECONDS)
@@ -30,7 +30,7 @@ public class WaitUtil {
         wait.until(angularHasFinishedProcessing());
     }
 
-    public static void fluentWaitIgnoringACollectionOfExceptions(){
+    public static void fluentWaitIgnoringACollectionOfExceptions() {
 
         List<Class<? extends Throwable>> exceptionsToIgnore = new ArrayList<Class<? extends Throwable>>() {
             {
@@ -49,7 +49,7 @@ public class WaitUtil {
         wait.until(angularHasFinishedProcessing());
     }
 
-    public static void fluentWaitIgnoringAListOfExceptions(){
+    public static void fluentWaitIgnoringAListOfExceptions() {
         Wait<WebDriver> wait = new FluentWait<WebDriver>(Browser.driver())
                 .withTimeout(15, TimeUnit.SECONDS)
                 .pollingEvery(500, TimeUnit.MILLISECONDS)
@@ -59,7 +59,7 @@ public class WaitUtil {
         wait.until(angularHasFinishedProcessing());
     }
 
-    public static void fluentWaitIgnoringMultipleExceptions(){
+    public static void fluentWaitIgnoringMultipleExceptions() {
         Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
                 .withTimeout(15, TimeUnit.SECONDS)
                 .pollingEvery(500, TimeUnit.MILLISECONDS)
@@ -122,5 +122,83 @@ public class WaitUtil {
                         " (angular.element(document).injector() !== undefined) &&" +
                         " (angular.element(document).injector().get('$http')" +
                         ".pendingRequests.length === 0)").toString());
+    }
+
+    public static ExpectedCondition<Boolean> waitForAjax(final long timeout) {
+        return driver -> {
+            final long startTime = System.currentTimeMillis();
+            final JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
+
+            while ((startTime + timeout) >= System.currentTimeMillis()) {
+                final Boolean scriptResult = (Boolean) javascriptExecutor.executeScript("return jQuery.active == 0");
+
+                if (scriptResult)
+                    return true;
+
+                delay(100);
+
+            }
+            return false;
+        };
+    }
+
+    public static void waitForPageToLoad(WebDriver driver) {
+
+        ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
+            public Boolean apply(WebDriver driver) {
+                return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
+            }
+        };
+
+        Wait<WebDriver> wait = new WebDriverWait(driver, 1000);
+        try {
+            wait.until(expectation);
+        } catch (Throwable error) {
+            System.out.println("Timeout waiting for Page Load Request to complete.");
+        }
+    }
+
+    private static void delay(final long amount) {
+        try {
+            Thread.sleep(amount);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * dynamically load jQuery
+     */
+    public static void injectJQuery(WebDriver driver) {
+        String LoadJQuery = "(function(jqueryUrl, callback) {\n" +
+                "if (typeof jqueryUrl != 'string') {" +
+                "jqueryUrl = 'https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js';\n" +
+                "}\n" +
+                "if (typeof jQuery == 'undefined') {\n" +
+                "var script = document.createElement('script');\n" +
+                "var head = document.getElementsByTagName('head')[0];\n" +
+                "var done = false;\n" +
+                "script.onload = script.onreadystatechange = (function() {\n" +
+                "if (!done && (!this.readyState || this.readyState == 'loaded'\n" +
+                "|| this.readyState == 'complete')) {\n" +
+                "done = true;\n" +
+                "script.onload = script.onreadystatechange = null;\n" +
+                "head.removeChild(script);\n" +
+                "callback();\n" +
+                "}\n" +
+                "});\n" +
+                "script.src = jqueryUrl;\n" +
+                "head.appendChild(script);\n" +
+                "}\n" +
+                "else {\n" +
+                "callback();\n" +
+                "}\n" +
+                "})(arguments[0], arguments[arguments.length - 1]);\n";
+
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        // give jQuery time to load asynchronously
+        driver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+        js.executeAsyncScript(LoadJQuery);
+        System.out.println("Jquery is loaded.");
     }
 }
