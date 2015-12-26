@@ -1,4 +1,4 @@
-package org.sayem;
+package org.sayem.wait;
 
 import com.google.common.base.Predicate;
 import org.openqa.selenium.*;
@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.sayem.Browser;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;

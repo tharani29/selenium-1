@@ -1,4 +1,4 @@
-package org.sayem;
+package org.sayem.wait;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
