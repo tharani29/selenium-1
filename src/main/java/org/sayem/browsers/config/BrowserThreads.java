@@ -14,7 +14,6 @@ import org.sayem.properties.Repository;
 import java.net.InetSocketAddress;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.concurrent.TimeUnit;
 
 import static org.openqa.selenium.Proxy.ProxyType.MANUAL;
 import static org.sayem.browsers.config.BrowserType.FIREFOX;
@@ -130,7 +129,6 @@ public class BrowserThreads {
             }
 
             webdriver = new RemoteWebDriver(seleniumGridURL, desiredCapabilities);
-            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } else {
             webdriver = selectedDriverType.browser.getWebDriverObject(desiredCapabilities);
             setup();
@@ -140,11 +138,9 @@ public class BrowserThreads {
     private void setup() {
         try {
             webdriver.navigate().to(defaultUrl);
-            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         } catch (NullPointerException ignored) {
             System.err.println("No URL specified, defaulting to properties url: " + Browser.getProperties(Repository.URL) + "'...");
             webdriver.navigate().to(Browser.getProperties(Repository.URL));
-            webdriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
     }
 
