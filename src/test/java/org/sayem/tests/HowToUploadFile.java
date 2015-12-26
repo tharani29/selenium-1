@@ -21,10 +21,10 @@ public class HowToUploadFile {
         String homeDir = System.getProperty("user.home");
         Browser.setBrowserUrl("http://the-internet.herokuapp.com/upload");
         driver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        driver().findElement(By.id("file-upload")).sendKeys(homeDir + "/IdeaProjects/selenium/some-file.txt");
+        driver().findElement(By.id("file-upload")).sendKeys(homeDir + "/IdeaProjects/selenium/important.txt");
         driver().findElement(By.id("file-submit")).click();
         String fileUploaed = driver().findElement(By.id("uploaded-files")).getText();
-        Assert.assertEquals(fileUploaed, "some-file.txt");
+        Assert.assertEquals(fileUploaed, "important.txt");
     }
 
     @AfterSuite
