@@ -1,7 +1,7 @@
 Selenium
 =======
 
-This repository contains Selenium WebDriver code examples, exercises and tutorials for developers.
+This repository contains collection of Selenium codes from various books, and project for learning purpose. You may not use it for commercial purposes.
 
 Over time, more and more test example will be uploaded here.
 
