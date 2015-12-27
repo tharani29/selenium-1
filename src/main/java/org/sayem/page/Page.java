@@ -1,78 +1,33 @@
-package org.sayem;
+package org.sayem.page;
 
-import net.lightbody.bmp.BrowserMobProxy;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.HasInputDevices;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
-import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sayem.browsers.config.BrowserThreads;
+import org.sayem.browsers.Browser;
 import org.sayem.forms.FormControl;
-import org.sayem.properties.PropertiesUtil;
-import org.sayem.properties.Repository;
 import org.sayem.selenium.*;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
 /**
- * Created by sayem on 12/4/15.
+ * Created by sayem on 12/27/15.
  */
-public interface Browser<T extends WebDriver> extends Actionable,
-        SearchScope<Browser<T>>, FormControl<Browser<T>>,
-        WebDriver,
+public interface Page<T extends WebDriver> extends Browser, Actionable,
+        SearchScope<Page<T>>, FormControl<Page<T>>, WebDriver,
         HasInputDevices, JavascriptExecutor, HasCapabilities {
-
-    List<BrowserThreads> BROWSER_THREADS = Collections.synchronizedList(new ArrayList<>());
-    ThreadLocal<BrowserThreads> THREAD_LOCAL = new ThreadLocal<BrowserThreads>() {
-        @Override
-        protected BrowserThreads initialValue() {
-            BrowserThreads browserThreads = new BrowserThreads();
-            BROWSER_THREADS.add(browserThreads);
-            return browserThreads;
-        }
-    };
-
-    static WebDriver driver() {
-        return THREAD_LOCAL.get().getDriver();
-    }
-
-    static WebDriver browserMobProxyEnabledDriver() throws Exception {
-        return THREAD_LOCAL.get().getBrowserMobProxyEnabledDriver();
-    }
-
-    static BrowserMobProxy browserMobProxy() {
-        return THREAD_LOCAL.get().getBrowserMobProxy();
-    }
-
-    static void setBrowserUrl(String value) {
-        System.setProperty("seleniumUrl", value);
-    }
-
-    static void quitBrowser() {
-        BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
-    }
-
-    static <T> T pageFactory(Class<T> clazz) {
-        return PageFactory.initElements(driver(), clazz);
-    }
-
-    static String getProperties(Repository repository) {
-        return PropertiesUtil.create(Repository.LOCATION.getValue()).data(repository);
-    }
 
     @Override
     default void quit() {
-        BROWSER_THREADS.forEach(BrowserThreads::quitDriver);
+        driver().quit();
     }
 
-    /**
-     * Wait for dynamic element to display
-     */
+    default WebDriver driver() {
+        return Browser.driver();
+    }
 
     default WebElement dynamicElement(By by, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver(), timeOut);
@@ -176,13 +131,5 @@ public interface Browser<T extends WebDriver> extends Actionable,
     default Object executeAsyncScript(String script, Object... args) {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver();
         return javascriptExecutor.executeAsyncScript(script, args);
-    }
-
-    static void delay(final long amount) {
-        try {
-            Thread.sleep(amount);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 }

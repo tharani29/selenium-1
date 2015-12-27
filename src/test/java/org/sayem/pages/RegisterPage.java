@@ -1,7 +1,7 @@
 package org.sayem.pages;
 
 import org.openqa.selenium.By;
-import org.sayem.Browser;
+import org.sayem.page.Page;
 import org.sayem.selectors.Id;
 import org.sayem.selectors.Xpath;
 import org.testng.Assert;
@@ -11,7 +11,7 @@ import java.util.UUID;
 /**
  * Created by sayem on 12/4/15.
  */
-public class RegisterPage implements Browser<RegisterPage> {
+public class RegisterPage implements Page<RegisterPage> {
 
     public RegisterPage createAnAccount() {
         String uuid = UUID.randomUUID().toString();

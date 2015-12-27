@@ -7,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.sayem.Browser;
+import org.sayem.browsers.Browser;
 import org.slf4j.Logger;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class WaitUtil {
 
     public static Logger LOG = getLogger(WaitUtil.class);
+    Predicate<WebDriver> didWeFindElementFoo = driver -> driver.findElements(By.id("foo")).size() > 0;
 
     public static void fluentWaitIgnoringSingleException() {
         Wait<WebDriver> wait = new FluentWait<>(Browser.driver())
@@ -85,8 +86,6 @@ public class WaitUtil {
         WebDriverWait wait = new WebDriverWait(Browser.driver(), 15, 100);
         wait.until(angularHasFinishedProcessing());
     }
-
-    Predicate<WebDriver> didWeFindElementFoo = driver -> driver.findElements(By.id("foo")).size() > 0;
 
     @SuppressWarnings("unchecked")
     public static Predicate<WebDriver> listenerIsRegisteredOnElement(final String listenerType, final WebElement element) {

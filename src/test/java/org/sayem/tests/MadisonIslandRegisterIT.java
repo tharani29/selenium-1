@@ -1,6 +1,6 @@
 package org.sayem.tests;
 
-import org.sayem.Browser;
+import org.sayem.browsers.Browser;
 import org.sayem.listeners.Screenshot;
 import org.sayem.pages.HomePage;
 import org.sayem.reports.ReporterNG;

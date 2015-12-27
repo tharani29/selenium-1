@@ -5,7 +5,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.UnhandledAlertException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.sayem.Browser;
+import org.sayem.browsers.Browser;
 import org.slf4j.Logger;
 
 import java.io.File;
