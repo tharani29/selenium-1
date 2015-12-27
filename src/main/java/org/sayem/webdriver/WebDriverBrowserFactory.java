@@ -1,0 +1,63 @@
+/*
+ Copyright 2014 Red Hat, Inc. and/or its affiliates.
+
+ This file is part of darcy-webdriver.
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+package org.sayem.webdriver;
+
+import org.sayem.ui.api.ElementContext;
+import org.sayem.web.api.Browser;
+import org.sayem.web.api.BrowserFactory;
+import org.sayem.webdriver.elements.WebDriverElement;
+import org.sayem.webdriver.internal.CachingTargetLocator;
+import org.sayem.webdriver.internal.TargetedWebDriverParentContext;
+import org.sayem.webdriver.internal.WebDriverTarget;
+import org.sayem.webdriver.internal.WebDriverTargets;
+
+import org.openqa.selenium.WebDriver;
+
+public abstract class WebDriverBrowserFactory<T extends WebDriverBrowserFactory<T>> implements
+        BrowserFactory {
+    /**
+     * Registers an element implementation to use for a given element type. A valid Element
+     * implementation must implement that element type, extend WebDriverElement, and be creatable
+     * by a method accepting a source WebElement and ElementConstructorMap (obviously this will
+     * generally be the element's own constructor).
+     *
+     * @see ElementConstructor
+     * @see ElementContext
+     * @see WebDriverElement
+     */
+    public abstract <E extends WebDriverElement> T withElementImplementation(Class<? super E> type,
+            ElementConstructor<E> constructor);
+
+    /**
+     * Boiler plate code to take a freshly minted driver, an {@link ElementConstructorMap}, and
+     * construct a {@link WebDriverParentContext} which is used to create a browser assigned to the
+     * current driver's target window.
+     */
+    protected static Browser makeBrowser(WebDriver driver, ElementConstructorMap elementMap) {
+        String currentWindowHandle = driver.getWindowHandle();
+        WebDriverTarget target = WebDriverTargets.window(currentWindowHandle);
+
+        CachingTargetLocator cachingLocator = new CachingTargetLocator(target, driver);
+        WebDriverParentContext context = new TargetedWebDriverParentContext(target, cachingLocator,
+                driver::getWindowHandles, elementMap);
+
+        return context.findById(Browser.class, currentWindowHandle);
+    }
+}
